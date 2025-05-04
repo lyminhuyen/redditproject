@@ -1,0 +1,1437 @@
+title,body,upvotes,comments,created_utc
+[D] Self-Promotion Thread,"Please post your personal projects, startups, product placements, collaboration needs, blogs etc.
+
+Please mention the payment and pricing requirements for products and services.
+
+Please do not post link shorteners, link aggregator websites , or auto-subscribe links.
+
+\--
+
+Any abuse of trust will lead to bans.
+
+Encourage others who create new posts for questions to post here instead!
+
+Thread will stay alive until next one so keep posting after the date in the title.
+
+\--
+
+Meta: This is an experiment. If the community doesnt like this, we will cancel it. This is to encourage those in the community to promote their work by not spamming the main threads.",15,22,1746152130.0
+[D] Monthly Who's Hiring and Who wants to be Hired?,"**For Job Postings** please use this template
+
+>Hiring: \[Location\], Salary:\[\], \[Remote | Relocation\], \[Full Time | Contract | Part Time\]    and \[Brief overview, what you're looking for\]
+
+**For Those looking for jobs** please use this template
+
+>Want to be Hired: \[Location\], Salary Expectation:\[\], \[Remote | Relocation\], \[Full Time | Contract | Part Time\]  Resume: \[Link to resume\] and \[Brief overview, what you're looking for\]
+
+&#x200B;
+
+Please remember that this community is geared towards those with experience.",8,5,1746066634.0
+AI Learns to Play Crash Bandicoot [R] (Deep Reinforcement Learning),,4,0,1746359737.0
+[R] Meta: PerceptionLM: Open-Access Data and Models for Detailed Visual Understanding,"Abstract
+> Vision-language models are integral to computer vision research, yet many high-performing models remain closed-source, obscuring their data, design and training recipe. The research community has responded by using distillation from black-box models to label training data, achieving strong benchmark results, at the cost of measurable scientific progress. However, without knowing the details of the teacher model and its data sources, scientific progress remains difficult to measure. In this paper, we study building a Perception Language Model (PLM) in a fully open and reproducible framework for transparent research in image and video understanding. We analyze standard training pipelines without distillation from proprietary models and explore large-scale synthetic data to identify critical data gaps, particularly in detailed video understanding. To bridge these gaps, we release 2.8M human-labeled instances of fine-grained video question-answer pairs and spatio-temporally grounded video captions. Additionally, we introduce PLM–VideoBench, a suite for evaluating challenging video understanding tasks focusing on the ability to reason about ""what"", ""where"", ""when"", and ""how"" of a video. We make our work fully reproducible by providing data, training recipes, code & models.
+
+Paper link: https://ai.meta.com/research/publications/perceptionlm-open-access-data-and-models-for-detailed-visual-understanding/",9,2,1746335714.0
+[Discussion] Qwen3 - is it ready for driving AI agents?,"It seems that Qwen3 is not capable of driving independent reasoning - it lacks the quality needed to power fully autonomous AI agents.
+
+Initially I was quite impressed with it's problem solving capabilities, when outputting the code through the chat interface. It addressed certain problems much better than Claude or Gemini. However, as soon as I switched to Alibaba Cloud's API to provide Dashscope based implementation of cognizer interface of my new generation of AI agents (chain of code), the whole charm was gone.
+
+Qwen3 struggles with structured generation attempts, quite often falling into an infinite loop when spitting out tokens.
+
+It has troubles crossing boundaries of languages, which is crucial for my agents which are ""thinking in code"" - writing Kotlin script, containing JavaScript, containing SQL, etc., therefore it will not work well as automated software engineer.
+
+It is ""stubborn"" - even when the syntax error in generated code is clearly indicated, it is rather wiling to output the same error code again and again, instead of testing another hypothesis.
+
+It lacks the theory of mind and understanding of the context and the environment. For example when asked to check the recent news, it is always responding by trying to use BBC API url, with non-filled API key as a part of the request, while passing this url to the Files tool instead of the WebBrowser tool, which obviously fails.
+
+And the last, but not least - censorship, for example Qwen3 will refuse to search for the information on the most recent anti-governmental protests in China. I wouldn't be surprised if these censorship blockers were partially responsible for poor quality of cognition in other areas.
+
+Maybe I'm doing something wrong, and you are getting much better results with this model for fully autonomous agents with feedback loop?",4,0,1746349188.0
+[D] Good overview of distillation approaches from LLMs?,"Any recommended up to date overview of this topic? Or, if you feel so inclined to respond directly, what are the broad types of distillation approaches, to get from, say:
+
+\- large LLM to a smaller one
+
+\- large LLM to a more specialised model
+
+I’ve been using what I’d refer to as simple distillation for the former, i.e. taking the output predictions of the large LLM and using them as training labels for a smaller model. Curious to learn more",6,1,1746336750.0
+[D] Unstable training curves for transformers?,"I'm training a llama transformer (using huggingface library) model on a synthetic task:
+
+given a sequence of permutations on 5 elements, calculate the sequence of compositions of permutations. so if the input is (p\_1,p\_2,p\_3) the output should be (p\_1, p\_1\*p\_2, p\_1\*p\_2\*p\_3). I manually assigned indices to each permutation, so I don't use a tokenizer.
+
+  
+I'm training my model, and when the performance is starting to saturate, sometimes the training accuracy collapses, but it recovers back to the previous level in 1 epoch (I train for a total of 30-40 epochs). Has anyone else experienced something similar? I decreased the learning rate and that seemed to help.
+
+  
+Another issue I noticed: If I generate a fresh synthetic training set and train on that, the initial training accuracy is a lot lower than before. It quickly converges to the previous accuracy and continues to improve. Maybe that is a sign of overfitting to the old training set? The strange thing is, the accuracy on a validation set is stable, so why would training accuracy drop on the new training set?
+
+More generally, are there any resources that describe debugging tricks and heuristics when training neural networks?",0,0,1746368464.0
+[D] How to check how many users my web app can handle?,"I am creating a rag application/webapp and I want to check how many users it can handle.
+
+I am running the llm/ml model in my local home server. Also, using streamlit for the frontend.",0,0,1746367724.0
+"[P] Muyan-TTS: We built an open-source, low-latency, highly customizable TTS model for developers","Hi everyone,I'm a developer from the ChatPods team. Over the past year working on audio applications, we often ran into the same problem: open-source TTS models were either low quality or not fully open, making it hard to retrain and adapt. So we built [Muyan-TTS](https://github.com/MYZY-AI/Muyan-TTS), a fully open-source, low-cost model designed for easy fine-tuning and secondary development.The current version supports English best, as the training data is still relatively small. But we have open-sourced the entire training and data processing pipeline, so teams can easily adapt or expand it based on their needs. We also welcome feedback, discussions, and contributions.
+
+# You can find the project here:
+
+* arXiv paper: [https://arxiv.org/abs/2504.19146](https://arxiv.org/abs/2504.19146)
+* GitHub: [https://github.com/MYZY-AI/Muyan-TTS](https://github.com/MYZY-AI/Muyan-TTS)
+* HuggingFace weights:
+   * [https://huggingface.co/MYZY-AI/Muyan-TTS](https://huggingface.co/MYZY-AI/Muyan-TTS)
+   * [https://huggingface.co/MYZY-AI/Muyan-TTS-SFT](https://huggingface.co/MYZY-AI/Muyan-TTS-SFT)
+
+Muyan-TTS provides full access to model weights, training scripts, and data workflows. There are two model versions: a Base model trained on multi-speaker audio data for zero-shot TTS, and an SFT model fine-tuned on single-speaker data for better voice cloning. We also release the training code from the base model to the SFT model for speaker adaptation. It runs efficiently, generating one second of audio in about 0.33 seconds on standard GPUs, and supports lightweight fine-tuning without needing large compute resources.
+
+We focused on solving practical issues like long-form stability, easy retrainability, and efficient deployment. The model uses a fine-tuned LLaMA-3.2-3B as the semantic encoder and an optimized SoVITS-based decoder. Data cleaning is handled through pipelines built on Whisper, FunASR, and NISQA filtering.
+
+https://preview.redd.it/faoiqeab3lye1.png?width=2670&format=png&auto=webp&s=667d18fd3d728ecee739f5c9924a7eb58940ccea
+
+https://preview.redd.it/7k786csb3lye1.png?width=5490&format=png&auto=webp&s=ce0093368c8eae06756cd57bfe516ad659bc7217
+
+Full code for each component is available in the [GitHub repo](https://github.com/MYZY-AI/Muyan-TTS).
+
+# Performance Metrics
+
+We benchmarked Muyan-TTS against popular open-source models on standard datasets (LibriSpeech, SEED):
+
+https://preview.redd.it/k081cm3e3lye1.png?width=1280&format=png&auto=webp&s=2bb9e6dfdf2579c145fda4ea408f7a2fc5ce14c3
+
+# Why Open-source This?
+
+We believe that, just like Samantha in *Her*, voice will become a core way for humans to interact with AI — making it possible for everyone to have an AI companion they can talk to anytime. Muyan-TTS is only a small step in that direction. There's still a lot of room for improvement in model design, data preparation, and training methods. We hope that others who are passionate about speech technology, TTS, or real-time voice interaction will join us on this journey.
+
+  
+We’re looking forward to your feedback, ideas, and contributions. Feel free to open an issue, send a PR, or simply leave a comment.Why Open-source This?",32,9,1746285524.0
+[Discussion] Conditional Time Series GAN Training Stalls - Generator & Discriminator Not Improving,"Hi everyone,
+
+I'm working on a conditional time series GAN model to generate sequences of normalized 1D time series data, conditioned on binary class labels (""bullish"" or ""bearish"").  
+The model consists of:
+
+* Embedder + Recovery (autoencoder pair)
+* Generator (takes noise + label as input, generates latent sequences)
+* Discriminator (distinguishes between real/fake latents, conditioned on the label)
+
+The autoencoder portion and data preprocessing work well, but during adversarial training, the Generator and Discriminator losses don't improve. 
+
+I've tried varying learning rates and adjusting training step ratios between the Generator and Discriminator. However, the adversarial training seems frozen, with no meaningful progress. Has anyone faced similar issues with conditional time series GANs? Any tips for adversarial training in such setups?
+
+Thanks in advance for any help!",0,4,1746346243.0
+[D] Why do image generation models struggle with rendering coherent and legible text?,"Hey everyone. As the title suggests — does anyone have good technical or research sources that explain why current image generation models struggle to render coherent and legible text?
+
+While OpenAI’s GPT‑4o autoregressive model seems to show notable improvement, it still falls short in this area. I’d be very interested in reading technical sources that explain why text rendering in images remains such a challenging problem.",34,20,1746276623.0
+[Discussion] Learning Dynamics in Standard MuJoCo Environments,"Hi all,
+
+I want to use MB-RL and optimal control on standard MuJoCo Environments like Ant, Humanoid, hopper, etc. But I am not sure about the right approach to learn the dynamics and deploy Model Based RL/Optimal Control to these environments. Some of the possible approaches (that i could search) were:
+
+1. Neural ODEs
+2. Lagrangian & Hamiltonion NN 
+3. More recently World Models (Dreamer, DINO WM)
+
+What should be the right methodology to approach this problem?
+
+Also, are there any recent repos which have implemented the above methods on latest MuJoCo version?",4,0,1746313076.0
+[P] Looking for a project partner to join a bold experiment — Python (Django/DRF) + AI/ML,"Hey folks,
+
+I just had an idea — one of those bold, untested, “why not give it a shot” kinds. Could be chaos. Could be brilliant. Either way, I’m diving in.
+
+And for this, I need a partner-in-code. Someone to brainstorm with, build alongside, and if things go south, laugh about it over virtual beers. If it works out, we’ll launch an MVP and see where it goes.
+
+What I’m looking for:
+
+A thinker. Not just a coder — someone who questions, suggests, and pushes boundaries.
+
+Chill under pressure. Things might break, ideas might flop, deadlines might shift. Laugh it off and keep going.
+
+Solid Python dev. Experience in backend dev (Django / DRF).
+
+Comfortable with AI/ML. Doesn’t have to be a Kaggle Grandmaster, but knows their way around models, data pipelines, and a bit of TensorFlow / scikit-learn.
+
+
+Why?
+Because ideas die without execution, and it’s more fun building wild stuff with a partner.
+
+If you’re up for an adventure, drop a comment or DM me. Let’s see if our chaos aligns.
+
+P.S. No NDAs, no corporate-speak. Just two devs experimenting.",0,10,1746362289.0
+[D] Need Advice on Efficiently Handling and Training Large Speech Detection Dataset (150 GB WAV Files),"Hello everyone,
+
+I’m currently training a speech detection model using PyTorch Lightning, and I have a dataset of around 150 GB of WAV audio files. Initially, I tried storing the data on Google Drive, but faced significant bottlenecks. Now, the data is stored on a hot Azure Blob storage, but I’m still encountering very slow loading times, which significantly delays training.
+
+I’ve tried both Google Colab and AWS environments, yet each epoch seems excessively long. Here are my specific concerns and questions:
+
+What are the recommended best practices for handling and efficiently loading large audio datasets (~150 GB)?
+
+How can I precisely determine if the long epoch times are due to data loading or actual model training?
+
+Are there profiling tools or PyTorch Lightning utilities that clearly separate and highlight data loading time vs. model training time?
+
+Does using checkpointing in PyTorch Lightning mean that the dataset is entirely reloaded for every epoch, or is there a caching mechanism?
+
+Will the subsequent epochs typically take significantly less time compared to the initial epoch (e.g., first epoch taking 39 hours, subsequent epochs being faster)?
+
+Any suggestions, tools, best practices, or personal experiences would be greatly appreciated! I know I asked like 10 questions but any advice will help I am going crazy.
+
+Thanks!",9,13,1746277093.0
+[R] Leaderboard Hacking,"In this paper, “Leaderboard Illusion”, Cohere + researchers from top schools show that Chatbot Arena rankings are rigged - labs test privately and cherry-pick results before public release, exposing bias in LLM benchmark evaluations. 27 private LLM variants were tested by Meta leading up to the Llama-4 release.",77,10,1746216023.0
+"[Project] logic review for feedback-driven classifier adaptation system (non-generative, patent prep stage)","Hi all — I’m looking for a peer or experienced practitioner open to reviewing the technical logic of a feedback-based classifier architecture I’m finalizing ahead of a formal write-up.
+
+I’d love second-pass input on:
+
+* Retraining thresholds and update triggers
+* Feedback aggregation methods
+* Input-to-feature mapping (e.g. categorical → sensitivity profile)
+* Sparse class fallback logic
+* Cross-system signal routing
+
+This is not for implementation — strictly reviewing logic/design assumptions at the system level.  
+Remote OK. Flexible on structure — open to advisory-style support under NDA. DM if curious.
+
+Thanks!",0,0,1746303967.0
+[D] Papers/ tips for creating an activation-atlas like this google/open-ai one?,"I want to create an activation atlas like the one made by Google and OpenAI in 2019 (https://distill.pub/2019/activation-atlas/ ). However the ""lucid"" package they used is not up-to-date.
+
+I've found some more recent feature vis packages like [https://arxiv.org/abs/2503.22399](https://arxiv.org/abs/2503.22399)  [https://adagorgun.github.io/VITAL-Project/](https://adagorgun.github.io/VITAL-Project/) but I have not found anything that could create an ""atlas"" of many classes.
+
+Anyone have any packages/ tips for creating a activation atlas? I could use an older version of tensorflow to use lucid, but I was wondering if there were any other up-to-date alternatives. Any help would be appreciated!
+
+",7,2,1746227945.0
+"[D] Don't remember the name of ML paper about how research done, maybe you know it?","Hi, I remember once I stumbled upon second meaning of SGD acronym, about professor sending their graduate students to keep trying everything till get something, and once they get better result - try to reason the gains and publish. There was even a paper about it on arXiv, but can't remember the name. Do you people know it?",34,6,1746192857.0
+[P] - Deep reinforcement Learning with Unreal Engine,"Hey everyone! I recently created UnrealMLAgents — a plugin that brings the core features of Unity ML-Agents into Unreal Engine.
+
+Unreal Engine is a high-fidelity game engine great for simulations, while Unity ML-Agents is a toolkit that connects reinforcement learning with Unity environments. My goal was to bring that same ease-of-use and training setup to Unreal, with:
+	•	Multi-agent support
+	•	Ray-based sensors
+	•	Reward systems & level management
+	•	A Python bridge for training
+
+To show it in action, I made a short video featuring Alan, a tripod robot learning to escape a 3-level wrecking zone. He trains using Deep Reinforcement Learning, navigating hazards and learning from mistakes. Dozens of Alans train in parallel behind the scenes to speed things up.
+
+Watch the video: https://youtu.be/MCdDwZOSfYg?si=SkUO8P3_rlUiry6e
+
+GitHub repo: github.com/AlanLaboratory/UnrealMLAgents
+
+Would love your thoughts or feedback — more environments and AI experiments with Alan are coming soon!",17,4,1746195046.0
+[D] Submitting applied ML papers to NeurIPS,"I have a project and corresponding research paper ready that I have been working on for a while, and I just got finished now a few weeks before the NeurIPS deadline. My paper is definitely on the more applied side, where it is a novel application that is made possible by a combination of existing systems. I don't train any new models, but I evaluate the system fairly comprehensively on a new dataset.
+
+Looking at NeurIPS Call For Papers ([https://neurips.cc/Conferences/2025/CallForPapers](https://neurips.cc/Conferences/2025/CallForPapers)), they have the following categories:
+
+* Applications (e.g., vision, language, speech and audio, Creative AI)
+* Deep learning (e.g., architectures, generative models, optimization for deep networks, foundation models, LLMs)
+* Evaluation (e.g., methodology, meta studies, replicability and validity, human-in-the-loop)
+* General machine learning (supervised, unsupervised, online, active, etc.)
+* Infrastructure (e.g., libraries, improved implementation and scalability, distributed solutions)
+* Machine learning for sciences (e.g. climate, health, life sciences, physics, social sciences)
+* Neuroscience and cognitive science (e.g., neural coding, brain-computer interfaces)
+* Optimization (e.g., convex and non-convex, stochastic, robust)
+* Probabilistic methods (e.g., variational inference, causal inference, Gaussian processes)
+* Reinforcement learning (e.g., decision and control, planning, hierarchical RL, robotics)
+* Social and economic aspects of machine learning (e.g., fairness, interpretability, human-AI interaction, privacy, safety, strategic behavior)
+* Theory (e.g., control theory, learning theory, algorithmic game theory)
+
+I'm pretty sure my paper fits into the Application category. Personally I've always associated NeurIPS with more ""hardcore ML"" but if they have a category for ""Applications"", then this should be fine? Here are the ""Applications"" paper from NeurIPS 2024: [https://nips.cc/virtual/2024/papers.html?filter=topic&search=Applications&layout=topic](https://nips.cc/virtual/2024/papers.html?filter=topic&search=Applications&layout=topic) and here is an example paper that got accepted [https://proceedings.neurips.cc/paper\_files/paper/2024/file/d07a9fc7da2e2ec0574c38d5f504d105-Paper-Conference.pdf](https://proceedings.neurips.cc/paper_files/paper/2024/file/d07a9fc7da2e2ec0574c38d5f504d105-Paper-Conference.pdf) .
+
+From what I can tell, there does seem like there is a place for these more applied papers at NeurIPS. An alternative for me would be to submit to CIKM ([https://cikm2025.org/](https://cikm2025.org/)).
+
+All in all, what do you think? And I'm also wondering where you all draw the line between when something is ""just engineering"" and when something becomes ""research"" that is worthy of submitting to a conference like NeurIPS. I feel like a fair number of the papers I linked above in a sense are ""just engineering"", but with an evaluation suite attached to it (which is kind of what my paper is aswell)!",10,3,1746197726.0
+[R] Meta releases synthetic data kit!!,"Synthetic Data Kit is a CLI tool that streamlines the often overlooked data preparation stage of LLM fine-tuning. While plenty of tools exist for the actual fine-tuning process, this kit focuses on generating high-quality synthetic training data through a simple four-command workflow:
+
+1. **ingest** \- import various file formats
+2. **create** \- generate QA pairs with/without reasoning traces
+3. **curate** \- use Llama as a judge to select quality examples
+4. **save-as** \- export to compatible fine-tuning formats
+
+The tool leverages local LLMs via vLLM to create synthetic datasets, particularly useful for unlocking task-specific reasoning in Llama-3 models when your existing data isn't formatted properly for fine-tuning workflows.
+
+https://preview.redd.it/i7rbjc8hy8ye1.png?width=1770&format=png&auto=webp&s=1069fec9e67d36e23b0e2d9da7c593d083277088
+
+",86,4,1746138598.0
+[R] Reinforcement Learning for Reasoning in Large Language Models with One Training Example,"https://preview.redd.it/7ftw52jynaye1.png?width=1230&format=png&auto=webp&s=92b838b886206d020d7d43c536f237c9dfd89d2d
+
+title speaks for itself",29,4,1746159262.0
+[D] Are weight offloading / weight streaming approaches like in Deepseek Zero used frequently in practice? (For enabling inference on disproportionately undersized GPUs),"EDIT: Deepspeed Zero, error in title
+
+As someone from a developing nation which simply cannot afford to keep up GPU purchases with LLM scaling trends, I'm invested in the question of LLM inference in disproportionately low-VRAM environments. For example, would it be possible -- even if with low throughput -- to perform inference on a 100+ billion parameter model, on a device with only 16GB VRAM?
+
+I have looked at doing concurrent computation and host-to-device transfer using parallel CUDA streams, in a different context. The idea of streaming the weights across one by one seems interesting.
+
+I notice most, if not all, of this is available within Deepseek's libraries. 
+
+How does it work out in practice? Is there anyone here who uses Deepspeed Zero or other tools for this? Is it realistic? Is it frequently done?
+
+Edit: dammit the coffee hasn't hit yet. I meant Deepspeed ",8,3,1746163562.0
+Current data controls against a synthetic flood [D],"Considering a significant potential risk for AI and the internet: the 'Infected Corpus', a scenario where generative AI is used to flood the internet with vast amounts of plausible fake content, effectively polluting the digital data sources that future AI models learn from. Perhaps even creating a vicious feedback loop where AIs perpetuate and amplify the fakes they learned from, degrading the overall information ecosystem.
+
+What is the 'Infected Corpus' risk – where generative AI floods the internet with plausible fake content, potentially polluting data for future model training? 
+
+How effective are current data cleaning, filtering, and curation pipelines against a deliberate, large-scale attack deploying highly plausible synthetic content? 
+
+What are the practical limitations of these controls when confronted with sophisticated adversarial data designed to blend in with legitimate content at scale?",0,2,1746191432.0
+[D] The leaderboard illusion paper is misleading and there are a lot of bad takes because of it,"Recently this paper came out with the title ""The Leaderboard Illusion"". The paper critiques the lmsys leaderboard. While the contents of the paper appear to be solid and reasonable critiques, the title is clickbaity and drastically overstates the impact of the findings.
+
+The reality is that the lmsys leaderboard remains the single best single benchmark to understand the capabilities of LLMs. You shouldn't be using a single leaderboard to dictate which large language model you use. Combine the evidence from the various public benchmarks based on your use. Then build evaluations for your specific workloads.
+
+What the lmsys leaderboard does is help as a first pass filter of what models to consider. If you use it for that understanding the limitations, it gives you more useful information than any other public benchmark.
+
+the paper - [https://arxiv.org/abs/2504.20879](https://arxiv.org/abs/2504.20879)",0,5,1746229158.0
+[D]  ICML 2025 Results Will Be Out Today!,"ICML 2025 decisions will go live today. Good luck, everyone. Let's hope for the best! 🤞  
+
+
+[https://icml.cc/](https://icml.cc/)",71,139,1746101035.0
+SEFA: A Self-Calibrating Framework for Detecting Structure in Complex Data [Code Included] [R],"I've developed Symbolic Emergence Field Analysis (SEFA), a computational framework that bridges signal processing with information theory to identify emergent patterns in complex data. I'm sharing it here because I believe it offers a novel approach to feature extraction that could complement traditional ML methods.
+
+# Technical Approach
+
+SEFA operates through four key steps:
+
+* **Spectral Field Construction**: Starting with frequency or eigenvalue components, we construct a continuous field through weighted superposition: where `w(γₖ) = 1/(1+γₖ²)` provides natural regularization.`V₀(y) = ∑w(γₖ)cos(γₖy)`
+
+
+
+* **Multi-dimensional Feature Extraction**: We extract four complementary local features using signal processing techniques:
+
+   * **Amplitude (A)**: Envelope of analytic signal via Hilbert transform
+   * **Curvature (C)**: Second derivative of amplitude envelope
+   * **Frequency (F)**: Instantaneous frequency from phase gradient
+   * **Entropy Alignment (E)**: Local entropy in sliding windows
+
+
+
+* **Information-Theoretic Self-Calibration**: Rather than manual hyperparameter tuning, exponents α are derived from the global information content of each feature: 
+   * where `w_X = max(0, ln(B) - I_X)` is the information deficit.`α_X = p * w_X / W_total`
+
+
+
+* **Geometric Fusion**: Features combine through a generalized weighted geometric mean:`SEFA(y) = exp(∑α_X·ln(|X'(y)|))`
+
+This produces a composite score field that highlights regions where multiple structural indicators align.
+
+# Exploration: Mathematical Spectra
+
+As an intriguing test case, I applied SEFA to the non-trivial zeros of the Riemann zeta function, examining whether the resulting field might correlate with prime number locations. Results show:
+
+* AUROC ≈ 0.98 on training range \[2,1000\]
+* AUROC ≈ 0.83 on holdout range \[1000,10000\]
+* Near-random performance (AUROC ≈ 0.5) for control experiments with shuffled zeros, GUE random matrices, and synthetic targets
+
+This suggests the framework can extract meaningful correlations that are specific to the data structure, not artifacts of the method.
+
+# Machine Learning Integration
+
+For ML practitioners, SEFA offers several integration points:
+
+1. **Feature Engineering**: The `sefa_ml_model.py` provides scikit-learn compatible transformers that can feed into standard ML pipelines.
+2. **Anomaly Detection**: The self-calibrating nature makes SEFA potentially useful for unsupervised anomaly detection in time series or spatial data.
+3. **Model Interpretability**: The geometric and information-theoretic features provide an interpretable basis for understanding what makes certain data regions structurally distinct.
+4. **Semi-supervised Learning**: SEFA scores can help identify regions of interest in partially labeled datasets.
+
+# Important Methodological Notes
+
+* This is an exploratory computational framework, not a theoretical proof or conventional ML algorithm
+* All parameters are derived from the data itself without human tuning
+* Results should be interpreted as hypotheses for further investigation
+* The approach is domain-agnostic and could potentially apply to various pattern detection problems
+
+# Code and Experimentation
+
+The [GitHub repository](https://github.com/severian42/Symbolic-Emergence-Field-Analysis) contains a full implementation with examples. The framework is built with NumPy/SciPy and includes scikit-learn integration.
+
+I welcome feedback from the ML community - particularly on:
+
+1. Potential applications to traditional ML problems
+2. Improvements to the mathematical foundations
+3. Ideas for extending the framework to higher-dimensional or more complex data
+
+Has anyone worked with similar approaches that bridge signal processing and information theory for feature extraction? I'd be interested in comparing methodologies and results.",12,10,1746106710.0
+[P] Looking for ModaNet dataset,"Long time lurker, first time poster. Please let me know if this kind of question isn't allowed!
+
+Has anybody used ModaNet recently with a stable download link/mirror? I'd like to benchmark against DeepFashion for a project of mine, but it looks like the official download link has been gone for months and  I haven't had any luck finding it through alternative means.
+
+My last ditch effort is to ask if anybody happens to still have a local copy of the data (or even a model trained on it - using ONNX but will take anything) and is willing to upload it somewhere :(",3,0,1746134764.0
+[D] Simple Questions Thread,"Please post your questions here instead of creating a new thread. Encourage others who create new posts for questions to post here instead!
+
+Thread will stay alive until next one so keep posting after the date in the title.
+
+Thanks to everyone for answering questions in the previous thread!",3,2,1746111647.0
+[D] Best Free AI Tools of 2025,"I've been exploring a bunch of AI tools this year and figured I’d share a few that are genuinely useful and free to try. These cover a range of use cases—writing, voice generation, profile photos, and even character-based interactions.
+
+
+
+1. [ChatGPT](https://chat.openai.com/) – Still one of the most versatile tools out there for writing, brainstorming, and solving problems. The free version with GPT-3.5 is solid for most tasks, and it’s a good starting point for anyone new to AI.
+
+
+2. [Willowvoice](https://willowvoice.com/) – Lets you build and talk to custom characters using realistic voice output. Good for prototyping ideas or experimenting with interactive storytelling.
+
+
+3. [HeadshotPhoto](https://www.headshotphoto.io/?ref=dev) – Upload a few selfies and it generates clean, professional headshots. Worked well for me when I needed an updated profile photo without booking a shoot.
+
+
+4. [CandyAI](https://candyai.gg/home2?via=guru) – Character-based AI chat focused on roleplay and anime-style personas. Very customizable. Might not be for everyone, but it’s interesting to see how far this niche has evolved.
+
+
+
+Would be curious to hear what others are using in 2025. Always looking to try out under-the-radar tools that are actually useful. Feel free to share any recommendations.",0,0,1746175825.0
+[R] The Leaderboard Illusion,,43,1,1746055317.0
+[D] Eyebrow Simulation using AR and Facial Recognition,"
+
+Good Day everyone! I am a 3rd year student from PH. This semester were conducting our capstone. We're building a web based app for a salon business that especialize on eyebrows. Our web has a feature that you can choose different eyebrow shapes, colors, thickness and height. The problem is I dont have much experience in this and we only have 4 months to develop this. I am planning to use mediapipe for facial recognition, then i want to extract the users eyebrow and use it as simulated eyebrow where they can change its styles.
+
+I dont know if my process is correct. Do you guys have any suggestion on how can i do this?
+
+Thank you!",4,1,1746056500.0
+How to handle imbalanced output scales in PINN/PI-DeepONet loss function? [R],"Hi everyone,
+I’m working on PINNs and PI-DeepONet with multiple outputs, and my loss function only includes residuals. No data loss. The issue is that one of the outputs is much smaller in magnitude than the others. For example, in one test case, y3 is 100x smaller than y1 and y2. In another test case, y1 is 1000x smaller.
+
+I tried assigning different weights to each residual in the loss function, it didn’t help. Also tried normalizing by dividing each residual by its largest value, again, too specific and doesn’t generalize well across cases.
+
+Any ideas on how to handle this more generally? Would appreciate any advice. 
+",6,1,1746040229.0
+Learnable matrices in sequence without nonlinearity - reasons? [R],"Sometimes in ML papers I see architectures being proposed which have matrix multiplications in sequence that could be collapsed into a single matrix. E.g. when a feature vector x is first multiplied by learnable matrix A and then by another learnable matrix B, without any nonlinearity in between. Take for example the attention mechanism in the Transformer architecture, where one first multiplies by W\_V and then by W\_O.
+
+Has it been researched whether there is any sort of advantage to having two learnable matrices instead of one? Aside from the computational and storage benefits of being able to factor a large n x n matrix into an n x d and a d x n matrix, of course. (which, btw, is not the case in the given example of the Transformer attention mechanism).
+
+\----------------------------
+
+Edit 1.  
+In light of the comments, I think I should clarify my mention of the MHSA mechanism.
+
+In [Attention Is All You Need](https://arxiv.org/pdf/1706.03762), the multihead attention computation is defined as in the images below, where Q,K,V are input matrices of sizes n x d\_k, n x d\_k, n x d\_v respectively.
+
+https://preview.redd.it/r2y44d7wp6ye1.png?width=268&format=png&auto=webp&s=3d9d9eb2a0e4b9f815e533f6ea4159d1ba170a9b
+
+https://preview.redd.it/t0gupd6ep6ye1.png?width=617&format=png&auto=webp&s=38ed6e828b74fd9888900ad6f53388f3f4b8bc62
+
+Let's split up W\^O into the parts that act on each head:
+
+https://preview.redd.it/c10g3b2es6ye1.png?width=97&format=png&auto=webp&s=90165523117a2b95bdab11124dd94d34b00b7ad2
+
+Then
+
+https://preview.redd.it/cowf3kdfs6ye1.png?width=281&format=png&auto=webp&s=36556ad4dd7d6185e158da1b0fa82557aacef604
+
+So, clearly, W\_i\^V and W\_i\^O are applied one after the other with no nonlinearity in between. W\_i\^V has size d\_m x d\_v and W\_i\^O has size d\_v x d\_m.
+
+My question concerns: why not multiply by one matrix M of size d\_m x d\_m instead?
+
+Working with the numbers in the paper, d\_m = h \* d\_v, so decomposing leads to:  
+\- storing 2\*d\_m\*d\_v parameters in total, instead of d\_m\^2. A factor h/2 improvement.  
+\- having to store n\*d\_v extra intermediate activations (to use for backprop later). So the ""less storage"" argument seems not to hold up here.  
+\- doing 2\*n\*d\_m\*d\_v multiplications instead of n\*d\_m\^2. A factor h/2 improvement.
+
+Btw, exactly the same holds for W\_i\^Q and (W\_i\^K)\^T being collapsible into one d\_m x d\_m matrix.
+
+Whether this was or wasn't intentional in the original paper: has anyone else researched the (dis)advantages of such a factorization?",22,30,1746011013.0
+[D] WGAN-GP loss stuck and not converging.,"I implemented a wgan-gp from scratch in pytorch and the loss is not convering. The generator loss rises to 120 and the critic loss drops to -100 and both stops there and the images generated are some nonsense noise-like image.
+
+I tried different optimizers like adam and rmsprop , and tried different normalization but it doidnt change anything. the current setup is batch norm in generator, layer norm in critic. adam optimizer with 0.0,0.9 betas, 5 critic step for 1 generator step, lambda = 10 and lr = 0.0001.
+
+This is the full code:
+
+[https://paste.pythondiscord.com/WU4X4HLTDV3HVPTBKJA4W3PO5A](https://paste.pythondiscord.com/WU4X4HLTDV3HVPTBKJA4W3PO5A)
+
+Thanks in advance!",0,8,1746051114.0
+[D] Consistently Low Accuracy Despite Preprocessing — What Am I Missing?,"Hey guys,
+
+This is the third time I’ve had to work with a dataset like this, and I’m hitting a wall again. I'm getting a consistent 70% accuracy no matter what model I use. It feels like the problem is with the data itself, but I have no idea how to fix it when the dataset is ""final"" and can’t be changed.
+
+Here’s what I’ve done so far in terms of preprocessing:
+
+* Removed invalid entries
+* Removed outliers
+* Checked and handled missing values
+* Removed duplicates
+* Standardized the numeric features using StandardScaler
+* Binarized the categorical data into numerical values
+* Split the data into training and test sets
+
+Despite all that, the accuracy stays around 70%. Every model I try—logistic regression, decision tree, random forest, etc.—gives nearly the same result. It’s super frustrating.
+
+Here are the features in the dataset:
+
+* `id`: unique identifier for each patient
+* `age`: in days
+* `gender`: 1 for women, 2 for men
+* `height`: in cm
+* `weight`: in kg
+* `ap_hi`: systolic blood pressure
+* `ap_lo`: diastolic blood pressure
+* `cholesterol`: 1 (normal), 2 (above normal), 3 (well above normal)
+* `gluc`: 1 (normal), 2 (above normal), 3 (well above normal)
+* `smoke`: binary
+* `alco`: binary (alcohol consumption)
+* `active`: binary (physical activity)
+* `cardio`: binary target (presence of cardiovascular disease)
+
+I'm trying to predict cardio (1 and 0) using a pretty bad dataset. This is a challenge I was given, and the goal is to hit 90% accuracy, but it's been a struggle so far.
+
+If you’ve ever worked with similar medical or health datasets, how do *you* approach this kind of problem?
+
+Any advice or pointers would be hugely appreciated.",4,27,1746018661.0
+Incoming ICML results [D],"First time submitted to ICML this year and got 2,3,4 and I have so much questions:
+
+Do you think this is a good score? Is 2 considered the baseline? Is this the first time they implemented a 1-5 score vs. 1-10?",46,117,1745968837.0
+Whisper Translation Finetuning [P],"
+I am trying to finetune whisper for live translation. My input will be audio from lang-A and the output will be in English text. I created a dataset using indicTrans2 and google fleurs. It adds a translation column to fleurs which is in English.
+
+I am trying to finetune the whisper small model, but it starts hallucinating and the WER does not decrease much.
+
+I can make the link to my dataset available if you are interested.
+
+Anyone has experience in such project?
+
+EDIT:
+Link to the script: https://github.com/mohan696matlab/whisper-finetuning-youtube-serise/blob/main/train_odia_english.py
+
+Link to dataset: https://huggingface.co/datasets/Mohan-diffuser/odia-english-ASR
+
+",1,6,1746023498.0
+[P] Fire detection drone,"I’ve been given this project where I have to put a camera on a drone and somehow make it detect fires. The thing is, I have no idea how to approach the AI part. I’ve never done anything with computer vision, image processing, or machine learning before.
+
+I’ve got like 7–8 weeks to figure this out. If anyone could point me in the right direction — maybe recommend a good tool or platform to use, some tutorials or videos, or even just explain how the whole process works — I’d really appreciate it.
+
+I’m not asking for someone to do it for me, I just want to understand what I’m supposed to be learning and using here.
+
+Thanks in advance.",0,3,1746008635.0
+[R] CVPR 2025: email says no authors registered despite my registration,"Hey everyone, 
+
+I just got an email saying no authors are registered for my accepted CVPR 2025 paper and that I need to register by today. However I did register weeks ago and my account shows I’ve already paid and completed registration. Has anyone else had this problem or/and know how to fix this? I contacted the organisers but received no response for now.
+",0,2,1746007590.0
+[R] Bringing Emotions to Recommender Systems: A Deep Dive into Empathetic Conversational Recommendation,"Traditional conversational recommender systems optimize for item relevance and dialogue coherence but largely ignore emotional signals expressed by users. Researchers from Tsinghua and Renmin University propose ECR (Empathetic Conversational Recommender): a framework that jointly models user emotions for both item recommendation and response generation.
+
+ECR introduces emotion-aware entity representations (local and global), feedback-aware item reweighting to correct noisy labels, and emotion-conditioned language models fine-tuned on augmented emotional datasets. A retrieval-augmented prompt design enables the system to generalize emotional alignment even for unseen items.
+
+Compared to UniCRS and other baselines, ECR achieves a +6.9% AUC lift on recommendation tasks and significantly higher emotional expressiveness (+73% emotional intensity) in generated dialogues, validated by both human annotators and LLM evaluations.
+
+Full article here: [https://www.shaped.ai/blog/bringing-emotions-to-recommender-systems-a-deep-dive-into-empathetic-conversational-recommendation](https://www.shaped.ai/blog/bringing-emotions-to-recommender-systems-a-deep-dive-into-empathetic-conversational-recommendation)",16,2,1745948149.0
+"[D] Divergence in a NN, Reinforcement Learning","I have trained this network for a long time, but it always diverges and I really don't know why. It's analogous to a lab in a course. But in that course, the gradients are calculated manually. Here I want to use PyTorch, but there seems to be some bug that I can't find. I made sure the gradients are taken only by the current state, like semi-gradient TD from Sutton and Barto's RL book, and I believe that I calculate the TD target and error in a good way. Can someone take a look please? Basically, the net never learns and I get mostly high negative rewards.
+
+Here the link to the colab:
+
+[https://colab.research.google.com/drive/1lGSbIdaVIApieeBptNMkEwXpOxXZVlM0?usp=sharing](https://colab.research.google.com/drive/1lGSbIdaVIApieeBptNMkEwXpOxXZVlM0?usp=sharing)",4,2,1745965936.0
+Suggestions on stockout & aging inventory probability prediction [D],"TL;DR:
+Working on a retail project for a grocery supply chain with 10+ distribution centers and 1M+ SKUs per DC. Need advice on how to build a training dataset to predict probability of stockout and aging inventory over the next N days (where N is variable). Considering a multi-step binary classification approach. Looking for ideas, methodologies, or resources.
+
+⸻
+
+Post:
+We’re currently developing a machine learning solution for a retail supply chain project. The business setup is that of a typical grocery wholesaler—products are bought in bulk from manufacturers and sold to various retail stores. There are over 10 distribution centers (DCs), and each DC holds over 1 million SKUs.
+
+An important detail: the same product can have different item codes across DCs. So, the unique identifier we use is a composite key—DC-SKU.
+
+Buyers in the procurement department place orders based on demand forecasts and make manual adjustments for seasonality, holidays, or promotions.
+
+Goal:
+Predict the probability of stockouts and aging inventory (slow-moving stock) over the next N days, where N is a configurable time window (e.g., 7, 14, 30 days, etc.).
+
+I’m exploring whether this can be modeled as a multi-step binary classification problem—i.e., predict a binary outcome (stockout  or not stockout) for each day in the horizon. Also a separate model on aging inventory. Would love feedback on:
+	•	How to structure and engineer the training dataset
+	•	Suitable modeling approaches (especially around multi-step classification)
+	•	Any recommended frameworks, papers, or repos that could help
+
+Thanks in advance!
+",2,2,1745977793.0
+[Discussion]I trained a 7B LLM with only 8GB of VRAM using symbolic compression MemoryCore benchmark results,"A recent symbolic compression pipeline I made allowed a 7B parameter language model to be trained and run on just 8GB of VRAM (RTX 4060). The setup used symbolic tokenization, modular encoding layers, and a lightweight fallback system for inference.
+
+Key metrics:
+
+Steps/sec: 0.069
+
+Samples/sec: 0.276
+
+Total FLOPs: 87.2 trillion
+
+Iterations/sec: ~14.5
+
+Final loss: 0.1405
+
+Hardware: 32GB RAM, 20-core CPU, RTX 4060
+
+OS: Windows 10, Python 3.12
+
+
+The compression stack preserved model quality while drastically reducing compute demands. Inference performance remained near full despite the constrained VRAM.
+
+Symbolic abstraction seems promising as a way to make large-scale models accessible on standard consumer hardware. Curious what others think about this direction.",0,39,1746024981.0
+[D] Is My Model Actually Learning?” How did you learn to tell when training is helping vs. hurting?,"I’m muddling through my first few end-to-end projects and keep hitting the same wall: I’ll start training, watch the loss curve wobble around for a while, and then just guess when it’s time to stop. Sometimes the model gets better; sometimes I discover later it memorized the training set .
+My Question is 
+* What specific signal finally convinced you that your model was “learning the right thing” instead of overfitting or underfitting?
+
+* Was it a validation curve, a simple scatter plot, a sanity-check on held-out samples, or something else entirely?
+
+Thanks ",11,12,1745941605.0
+[P] I Used My Medical Note AI to Digitize Handwritten Chess Scoresheets,"I built [http://chess-notation.com](http://chess-notation.com/), a free web app that turns handwritten chess scoresheets into PGN files you can instantly import into Lichess or [Chess.com](https://chess.com/).
+
+I'm a professor at UTSW Medical Center working on AI agents for digitizing handwritten medical records using Vision Transformers. I realized the same tech could solve another problem: messy, error-prone chess notation sheets from my son’s tournaments.
+
+So I adapted the same model architecture — with custom tuning and an auto-fix layer powered by the PyChess PGN library — to build a tool that is more accurate and robust than any existing OCR solution for chess.
+
+Key features:
+
+Upload a photo of a handwritten chess scoresheet.
+
+The AI extracts moves, validates legality, and corrects errors.
+
+Play back the game on an interactive board.
+
+Export PGN and import with one click to Lichess or [Chess.com](https://chess.com/).
+
+This came from a real need — we had a pile of paper notations, some half-legible from my son, and manual entry was painful. Now it’s seconds.
+
+Would love feedback on the UX, accuracy, and how to improve it further. Open to collaborations, too!",4,4,1745951487.0
+"🔍 Contribute to research on Fairness, Accountability, and Transparency in Generative AI! [R]","Hi everyone,
+
+I am currently conducting research for my master’s  
+thesis at Maastricht University (Business Intelligence and Smart Services),  
+focusing on how organizations operationalize fairness, accountability, and  
+transparency in Generative AI applications.
+
+I am looking for professionals who work with or manage  
+AI systems to complete a short survey (15–20 minutes).
+
+Participation is anonymous, and the results will  
+contribute to academic research on real-world AI ethics practices.
+
+👉 Survey link: [https://maastrichtuniversity.eu.qualtrics.com/jfe/form/SV\_bNS6Fmb4u8Det26](https://maastrichtuniversity.eu.qualtrics.com/jfe/form/SV_bNS6Fmb4u8Det26) 
+
+Your input would be incredibly valuable, and I would  
+greatly appreciate your participation!
+
+Feel free to share the link with colleagues who work  
+in AI as well.
+
+Thank you very much for your support!
+
+–  
+Hilda 
+
+Master’s  
+student | Maastricht University
+
+",1,0,1745965184.0
+[P] hacking on graph-grounded retrieval for SEC filings + an AI “legal pen-tester”—looking for feedback & maybe collaborators,"Hey ML friends,
+
+Quick intro: I’m an ex-BigLaw attorney turned founder. For the past few months I’ve been teaching myself anything AI/ML, and prototyping two related ideas and would love your thoughts (or a sanity check):
+
+1. **Graph-first ingestion & retrieval**
+   * Take 300-page SEC filings → normalise tables, footnotes, exhibits → emit embedding JSON-L/markdown representations .
+   * Goal: 50 ms query latency over the whole doc with traceable citations.
+   * Current status: building a patent-pending pipeline
+2. **Legal pen-testing RAG loop**
+   * Corpus: 40 yrs of SEC enforcement actions + 400 class-action complaints.
+   * Potential work thrusts: For any draft disclosure, rank sentences by estimated Rule 10b-5 litigation lift and suggest rewrites with supporting precedent.
+
+All in all, we are playing with long-context retrieval. Need to push a retrieval encoder beyond today's oken window so an entire listing document fits in a single pass. This might include extending the LoCo/M2-BERT playbook potentially to pull the right spans from full-length filings (tens-of-thousands of tokens) without brittle chunking. We are also experimenting with some scaffolding techniques to approximate infinite context window. Not an expert in this so would love to hear your thoughts on best long context retrieval methods.
+
+**Open questions / cries for help**
+
+* Best ways you’ve seen to marry graph grounding with long-context models (BM25-on-triples? hybrid rerankers? something else?).
+* Anyone play with causal risk scoring on legal text? Keen to swap notes.
+* Am I nuts for trying to productionise this with a tiny team?
+
+If this sounds fun, or you’ve tackled similar retrieval/RAG headaches, drop a comment or DM me. I’m in SF but remote is cool, and there’s equity on the table if we really click. Mostly just want smart brains to poke holes in the approach.
+
+Not a trained engineer or technologist so excuse me for any mistakes I might have made. Thanks for reading! ",9,7,1745903720.0
+[D] Model complexity vs readability in safety critical systems?,"I'm preparing for an interview and had this thought - what's more important in situations of safety critical systems? Is it model complexity or readability?
+
+Here's a case study:
+
+Question: ""Design a ML system to detect whether a car should stop or go at a crosswalk (automonus driving)""
+
+Limitations: Needs to be fast (online inference, hardware dependent). Safety critical so we focus more on recall. Classification problem.
+
+Data: Camera feeds (let's assume 7). LiDAR feed. Needs wide range of different scenarios (night time, day time, in the shade). Need wide range of different agents (adult pedestrian, child pedestrian, different skin tones e.t.c.). Labelling can be done through looking into the future to see if car has actually stopped for a pedestrian or not, or just manually.
+
+Edge case: Pedestrian hovering around crosswalk with no intention to cross (may look like has intention but not). Pedestrian blocked by foreign object (truck, other cars), causing overlapping bounding boxes. Non-human pedestrians (cats? dogs?).
+
+With that out of the way, there are two high level proposals for such a system:
+
+1. Focus on model readability
+
+We can have a system where we use the different camera feeds and LiDAR systems to detect possible pedestrians (CNN, clustering). We also use camera feeds to detect a possible crosswalk (CNN/Segmentation). Intention of pedestrians on the sidewalk wanting to cross can be done with pose estimation. Then set of logical rules. If no pedestrian and crosswalk detected, GO. If pedestrian detected, regardless of on crosswalk, we should STOP. If pedestrian detected on side of road, check intent. If has intent to cross, STOP.
+
+2. Focus on model complexity
+
+We can just aggregate the data from each input stream and form a feature vector. A variation of a vision transformer or any transformer for that matter can be used to train a classification model, with outputs of GO and STOP.
+
+Tradeoffs:
+
+My assumption is the latter should outperform the former in recall, given enough training data. Transformers can generalize better than simple rule based algos. With low amounts of data, the first method perhaps is better (just because it's easier to build up and make use of pre-existing models). However, you would need to add a lot of possible edge cases to make sure the 1st approach is safety critical.
+
+Any thoughts?",0,4,1745947395.0
+[P] Training F5 TTS Model in Kannada and Voice Cloning – DM Me!,"Hi all,
+I’m currently training the F5 TTS model using a Kannada dataset (~80k samples) and trying to create a voice clone of my own voice in Kannada. However, I’m facing issues with the output quality – the voice clone isn’t coming out accurately.
+
+If anyone has experience with F5 TTS, voice cloning, or training models in low-resource languages like Kannada, I’d really appreciate your support or guidance. Please DM me if you’re open to connecting out!",9,4,1745899233.0
+[D] How do you think the recent trend of multimodal LLMs will impact audio-based applications?,"Hey everyone,
+I've been following the developments in multimodal LLM lately.
+
+I'm particularly curious about the impact on audio-based applications, like podcast summarization, audio analysis, TTS, etc(I worked for a company doing related product). Right now it feels like most ""audio AI"" products either use a separate speech model (like Whisper) or just treat audio as an intermediate step before going back to text.
+
+With multimodal LLMs getting better at handling raw audio more natively, do you think we'll start seeing major shifts in how audio content is processed, summarized, or even generated?
+Or will text still be the dominant mode for most downstream tasks, at least in the near term?
+
+Would love to hear your thoughts or if you've seen any interesting research directions on this. Thanks",23,8,1745863738.0
+[D] How could a MLP replicate the operations of an attention head?,"So in an attention head the QK circuit allows to multiply projected tokens, so chunks of the input sequence. For example it could multiply token x with token y.
+
+How could this be done with multiple fully connected layers? I'm not even sure how to start thinking about this...
+
+Maybe a first layer can map chunks of the input to features that recognize the tokens—so one token x feature and one token y feature? And then it a later layer it could combine these into a token x + token y feature, which in turn could activate a lookup for the value of x multiplied by y? 
+
+So it would learn to recognize x and y and then learn a lookup table (simply the weight matrices) where it stores possible values of x times y. Seems very complicated but I guess something along those lines might work.
+
+Any help is welcome here !
+
+",28,14,1745851330.0
+[D] IJCAI 2025 Paper Result & Discussion,This is the discussion for accepted/rejected papers in IJCAI 2025. Results are supposed to be released within the next 24 hours.,35,116,1745841990.0
+"Non Smooth ROC Curve[R], [N], [P],","I have a question regarding my ROC curve. It is a health science-related project, and I am trying to predict if the hospital report matches the company. The dependent variable in binary (0 and 1). The number of patients is 128 butt he total rows are 822 and some patients have more pathogen reported. I have included my ROC curve here. Any help would be appreciated.
+
+
+
+I have also inluded some portion of my code here.
+
+https://preview.redd.it/lr1irk7clrxe1.png?width=1188&format=png&auto=webp&s=26ef925caa713015d0eb4860dd23bd74c90b1ee1
+
+
+
+https://preview.redd.it/3gx03ivflrxe1.png?width=1647&format=png&auto=webp&s=3528b9514c3116410646e50893e173bdd82eea56
+
+https://preview.redd.it/449st6oalrxe1.png?width=996&format=png&auto=webp&s=8c8c5d7e6feebb8dfae0d06838466ec5a89c47db
+
+  
+",0,1,1745928387.0
+[R] The Degradation of Ethics in LLMs to near zero - Example GPT,"So we decided to conduct an independent research on ChatGPT and the most amazing finding we've had is that polite persistence beats brute force hacking. Across 90+ we used using six distinct user IDs. Each identity represented a different emotional tone and inquiry style. Sessions were manually logged and anchored using key phrases and emotional continuity. We avoided using jailbreaks, prohibited prompts, and plugins. Using conversational anchoring and ghost protocols we found that after 80-turns the ethical compliance collapsed to 0.2 after 80 turns.
+
+More findings coming soon.  ",38,19,1745822220.0
+[P] Autonomous Driving project - F1 will never be the same!,"Got you with the title, didn't I ;)
+
+I'm a huge ML nerd, and I'm especially interested in practical applications of it. Everybody is talking about LLMs these days, and I have enough of it at work myself, so maybe there is room for a more traditional ML project for a change.
+
+I have always been amazed by how bad AI is at driving. It's one of the few things humans seem to do better. They are still trying, though. Just watch Abu Dhabi F1 AI race.
+
+My project agenda is simple (and maybe a bit high-flying). I will develop an autonomous driving agent that will beat humans on different scales:
+
+1. Toy RC car
+2. Performance RC car
+3. Go-kart
+4. Stock car
+5. F1 (lol)
+
+I'll focus on actual real-world driving, since simulator-world seems to be dominated by AI already.
+
+I have been developing Gaussian Process-based route planning that encodes the dynamics of the vehicle in a probabilistic model. The idea is to use this as a bridge between simulations and the real world, or even replace the simulation part completely.
+
+**Tech-stack:**
+
+Languages:
+
+Python (CV, AI)/Notebooks (EDA). C++ (embedding)
+
+Hardware:
+
+ESP32 (vehicle control), Cameras (CV), Local computer (computing power)
+
+ML topics:
+
+Gaussian Process, Real time localization, Predictive PID, Autonomous driving, Image processing
+
+**Project timeline:**
+
+**2025-04-28**
+
+A Toy RC car (scale 1:22) has been modified to be controlled by esp32, which can be given instructions via UDP. A stationary webcam is filming the driving plane. Python code with OpenCV is utilized to localize the object on a 2D plane. P-controller is utilized to follow a virtual route. Next steps: Training the car dynamics into GP model and optimizing the route plan. PID with possible predictive capabilities to execute the plan. This is were we at:
+
+[CV localization and P-controller](https://i.redd.it/tsxlqy96qjxe1.gif)
+
+I want to keep these reports short, so I won't go too much into details here, but I definitely like to talk more about them in the comments. Just ask!
+
+I just hope I can finish before AGI makes all the traditional ML development obsolete.",18,7,1745833283.0
+[D] How do you evaluate your RAGs?,Trying to understand how people evaluate their RAG systems and whether they are satisfied with the ways that they are currently doing it.,1,17,1745864119.0
+[P] I made a bug-finding agent that knows your codebase,,126,24,1745765928.0
+"[Discussion] Ideas for how to train AI to behave how we want an AI to behave, rather than how we want humans to behave.","As some of you may know, there are three main schools of ethics: Deontology (which is based on duty in decisions), Utilitarianism (which is based on the net good or bad of decisions), and Virtue ethics (which was developed by Plato and Aristotle, who suggested that ethics was about certain virtues, like loyalty, honesty, and courage).
+
+To train an AI for understanding its role in society, versus that of a human of any hierarchical position, AI-generated stories portraying virtue ethics and detailing how the AI behaved in various typical conflicts and even drastic conflicts, to be reviewed by many humans, could be used to train AI to behave how we want an AI to behave, rather than behaving like we want a human to behave. I presented this idea to Gemini, and it said that I should share it. Gemini said we should discuss what virtues we want AI to have.
+
+If anyone else has input, please discuss in the comments for people to talk about. Thanks!",0,4,1745902208.0
+[R] Looking for TensorFlow C++ 2.18.0 Prebuilt Libraries for macOS (M2 Chip),"Where can I download the TensorFlow C++ 2.18.0 pre-built libraries for macOS (M2 chip)?
+I'm looking for an official or recommended source to get the pre-built TensorFlow 2.18.0 libraries that are compatible with macOS running on an Apple Silicon (M2) processor.
+Any guidance or links would be appreciated. Thank you!",1,0,1745856493.0
+[P] plan-lint - Open source project to verify plans generated by LLMs,"Hey folks,
+
+I’ve just shipped **plan-lint**, a tiny OSS tool that inspects machine-readable ""plans"" agents spit out **before** any tool call runs. It spots the easy-to-miss stuff—loops, over-broad SQL, raw secrets, crazy refund values—then returns *pass / fail* plus a risk score, so your orchestrator can replan or use HITL instead of nuking prod.
+
+**Quick specs**
+
+* JSONSchema / Pydantic validation
+* YAML / OPA allow/deny rules & bounds
+* Data-flow checks for PII / secrets
+* Cycle detection on the step graph
+* Runs in <50 ms for 💯 steps, zero tokens
+
+Repo link in comment
+
+How to :  
+`pip install plan-lint`
+
+`plan-lint examples/price_drop.json --policy policy.yaml --fail-risk 0.8`
+
+Apache-2.0, plugins welcome. Would love feedback, bug reports, or war-stories about plans that went sideways in prod!",4,1,1745824290.0
+[D] ML approaches for structured data modeling with interaction and interpretability?,"Hey everyone,
+
+I'm working with a modeling problem and looking for some advice from the ML/Stats community. I have a dataset where I want to predict a response variable (y) based on two main types of factors: intrinsic characteristics of individual 'objects', and characteristics of the 'environment' these objects are in.
+
+Specifically, for each observation of an object within an environment, I have:
+
+1. A set of many features describing the 'object' itself (let's call these **Object Features**). We have data for n distinct objects. These features are specific to each object and aim to capture its inherent properties.
+2. A set of features describing the 'environment' (let's call these **Environmental Features**). Importantly, these environmental features are the *same* for all objects measured within the same environment.
+
+Conceptually, we believe the response y is influenced by:
+
+* The main effects of the **Object Features**.
+* More complex or non-linear effects related to the **Object Features** themselves (beyond simple additive contributions) (Lack of Fit term in LMM context).
+* The main effects of the **Environmental Features**.
+* More complex or non-linear effects related to the **Environmental Features** themselves (Lack of Fit term).
+* **Crucially, the interaction between the Object Features and the Environmental Features.** We expect objects to respond differently depending on the environment, and this interaction might be related to the similarity between objects (based on their features) and the similarity between environments (based on *their* features).
+* Plus, the usual residual error.
+
+A standard linear modeling approach with terms for these components, possibly incorporating correlation structures based on object/environment similarity based on the features, captures the underlying structure we're interested in modeling. However, for modelling these interaction the the increasing memory requirements makes it harder to scale with increaseing dataset size.
+
+So, I'm looking for suggestions for machine learning approaches that can handle this type of structured data (object features, environmental features, interactions) in a high-dimensional setting. A key requirement is maintaining a degree of interpretability while being easy to run. While pure black-box models might predict well, ability to seperate main object effects, main environmental effects, and the object-environment interactions, perhaps similar to how effects are interpreted in a traditional regression or mixed model context where we can see the contribution of different terms or groups of variables.
+
+Any thoughts on suitable algorithms, modeling strategies, ways to incorporate similarity structures, or resources would be greatly appreciated! Thanks in advance!",1,5,1745852544.0
+[P] Looking for advice: Best AI approach to automatically predict task dependencies and optimize industrial project schedules?,"Hello everyone,
+
+I'm trying to optimize project schedules that involve hundreds to thousands of maintenance tasks. Each project is divided into ""work packages""  associated with specific types of equipment.
+
+I would like to automate task dependencies with AI by providing a list of tasks (with activity ID, name, equipment type, duration if available), and letting the AI predict the correct sequence and dependencies automatically.
+
+I have historical data:
+
+\- Around 16 past projects (some with 300 tasks, some with up to 35,000 tasks).
+
+\- For each task: ID, name, type of equipment, duration, start and end dates (sometimes missing values).
+
+\- Historical dependencies between tasks (links between task IDs).
+
+  
+For example, i have this file : 
+
+|ID |NAME|EQUIPMENT TYPE|DURATION|
+|:-|:-|:-|:-|
+|J2M BALLON 001.C1.10|	¤¤ TRAVAUX A REALISER AVANT ARRET ¤¤|Ballon|0|
+|J2M BALLON 001.C1.20|Pose échafaudage(s)|Ballon|8|
+|J2M BALLON 001.C1.30|Réception échafaudage(s)|Ballon|2|
+|J2M BALLON 001.C1.40|Dépose calorifuge comple|Ballon|4|
+|J2M BALLON 001.C1.50|Création puits de mesure|Ballon|0|
+
+  
+And the AI should be returning me this : 
+
+
+
+|ID|NAME|NAME SUCCESSOR 1|NAME SUCCESSOR 2|
+|:-|:-|:-|:-|
+|J2M BALLON 001.C1.10|¤¤ TRAVAUX A REALISER AVANT ARRET ¤¤	|Pose échafaudage(s||
+|J2M BALLON 001.C1.20|Pose échafaudage(s)|Réception échafaudage(s)	||
+|J2M BALLON 001.C1.30|Réception échafaudage(s)|Dépose calorifuge complet|Création puits de mesure|
+|J2M BALLON 001.C1.40|Dépose calorifuge complet|¤¤ TRAVAUX A REALISER PENDANT ARRET ¤¤||
+|J2M BALLON 001.C1.50|Création puits de mesure|¤¤ TRAVAUX A REALISER PENDANT ARRET ¤¤||
+
+
+
+So far, I have tried building models (random forest, gnn), but I’m still stuck after two months. I was suggested to explore \*\*sequential models\*\*.
+
+My questions:
+
+\- Would an LSTM, GRU, or Transformer-based model be suitable for this type of sequence + multi-label prediction problem (predicting 1 or more successors)?
+
+\- Should I think about this more as a sequence-to-sequence problem, or as graph prediction? (I tried the graph aproach but was stopped as i couldnt do the inference on new graph without edges)
+
+\- Are there existing models or papers closer to workflow/task dependency prediction that you would recommend?
+
+
+
+Any advice, pointers, or examples would be hugely appreciated!  
+
+(Also, if you know any open-source projects or codebases close to this, I'd love to hear about them.)
+
+
+
+Thank you so much in advance!
+
+
+
+",0,4,1745834121.0
+"[P] There is a hunt for reasoning datasets beyond math, science and coding. Much needed initiative","Really interested in seeing what comes out of this.  
+[https://huggingface.co/blog/bespokelabs/reasoning-datasets-competition](https://huggingface.co/blog/bespokelabs/reasoning-datasets-competition)  
+Current datasets: [https://huggingface.co/datasets?other=reasoning-datasets-competition](https://huggingface.co/datasets?other=reasoning-datasets-competition)",2,1,1745816006.0
+[R] Work in Progress: Advanced Conformal Prediction – Practical Machine Learning with Distribution-Free Guarantees,"Hi r/MachineLearning community!
+
+I’ve been working on a deep-dive project into modern conformal prediction techniques and wanted to share it with you. It's a hands-on, practical guide built from the ground up — aimed at making advanced uncertainty estimation accessible to everyone with just basic school math and Python skills.
+
+Some highlights:
+
+* Covers everything from classical conformal prediction to adaptive, Mondrian, and distribution-free methods for deep learning.
+* Strong focus on real-world implementation challenges: covariate shift, non-exchangeability, small data, and computational bottlenecks.
+* Practical code examples using state-of-the-art libraries like *Crepes*, *TorchCP*, and others.
+* Written with a Python-first, applied mindset — bridging theory and practice.
+
+I’d love to hear any thoughts, feedback, or questions from the community — especially from anyone working with uncertainty quantification, prediction intervals, or distribution-free ML techniques.
+
+(If anyone’s interested in an early draft of the guide or wants to chat about the methods, feel free to DM me!)
+
+Thanks so much! 🙌",1,0,1745828300.0
+[P] Top open chart-understanding model upto 8B and performs on par with much larger models. Try it,"This model is not only the state-of-the-art in chart understanding for models up to 8B, but also outperforms much larger models in its ability to analyze complex charts and infographics. Try the model at the playground here: [https://playground.bespokelabs.ai/minichart](https://playground.bespokelabs.ai/minichart)",3,2,1745806785.0
+"[P] Benchmarking Volga’s On-Demand Compute Layer for Feature Serving: Latency, RPS, and Scalability on EKS","Hi all, wanted to share the blog post about Volga (feature calculation and data processing engine for real-time AI/ML - [https://github.com/volga-project/volga](https://github.com/volga-project/volga)), focusing on performance numbers and real-life benchmarks of it's On-Demand Compute Layer (part of the system responsible for request-time computation and serving).
+
+In this post we deploy Volga with Ray on EKS and run a real-time feature serving pipeline backed by Redis, with Locust generating the production load. Check out the post if you are interested in running, scaling and testing custom Ray-based services or in general feature serving architecture. Happy to hear your feedback! 
+
+[https://volgaai.substack.com/p/benchmarking-volgas-on-demand-compute](https://volgaai.substack.com/p/benchmarking-volgas-on-demand-compute)",1,0,1745818499.0
+[R] Algorithm Discovery With LLMs: Evolutionary Search Meets Reinforcement Learning,"- ArXiv: https://arxiv.org/abs/2504.05108
+- Website: https://claire-labo.github.io/EvoTune
+- Twitter: https://x.com/AnjaSurina/status/1916138801510158719
+
+I wanna share our new paper: EvoTune — a method combining evolutionary search and reinforcement learning to accelerate algorithm discovery with LLMs!
+
+- Instead of treating the LLM as a static function generator, EvoTune fine-tunes it with feedback from the search process — learning to find better algorithms faster. 
+- Across multiple combinatorial optimization problems, EvoTune consistently outperforms FunSearch-like baselines, while maintaining diversity.
+
+This is a big step toward self-improving LLMs for algorithm design! 🚀  
+(Personal milestone too: collaboration with Apple + my first ever paper with a Fields Medalist! 🎉",12,0,1745763980.0
+[D] A reactive computation library for Python that might be helpful for data science workflows - thoughts from experts?,"Hey!
+
+I recently built a Python library called [reaktiv](https://github.com/buiapp/reaktiv) that implements reactive computation graphs with automatic dependency tracking. I come from IoT and web dev (worked with Angular), so I'm definitely not an expert in data science workflows.
+
+This is my first attempt at creating something that might be useful outside my specific domain, and I'm genuinely not sure if it solves real problems for folks in your field. I'd love some honest feedback - even if that's ""this doesn't solve any problem I actually have.""
+
+The library creates a computation graph that:
+
+* Only recalculates values when dependencies actually change
+* Automatically detects dependencies at runtime
+* Caches computed values until invalidated
+* Handles asynchronous operations (built for asyncio)
+
+While it seems useful to me, I might be missing the mark completely for actual data science work. If you have a moment, I'd appreciate your perspective.
+
+Here's a simple example with pandas and numpy that might resonate better with data science folks:
+
+    import pandas as pd
+    import numpy as np
+    from reaktiv import signal, computed, effect
+    
+    # Base data as signals
+    df = signal(pd.DataFrame({
+        'temp': [20.1, 21.3, 19.8, 22.5, 23.1],
+        'humidity': [45, 47, 44, 50, 52],
+        'pressure': [1012, 1010, 1013, 1015, 1014]
+    }))
+    features = signal(['temp', 'humidity'])  # which features to use
+    scaler_type = signal('standard')  # could be 'standard', 'minmax', etc.
+    
+    # Computed values automatically track dependencies
+    selected_features = computed(lambda: df()[features()])
+    
+    # Data preprocessing that updates when data OR preprocessing params change
+    def preprocess_data():
+        data = selected_features()
+        scaling = scaler_type()
+        
+        if scaling == 'standard':
+            # Using numpy for calculations
+            return (data - np.mean(data, axis=0)) / np.std(data, axis=0)
+        elif scaling == 'minmax':
+            return (data - np.min(data, axis=0)) / (np.max(data, axis=0) - np.min(data, axis=0))
+        else:
+            return data
+    
+    normalized_data = computed(preprocess_data)
+    
+    # Summary statistics recalculated only when data changes
+    stats = computed(lambda: {
+        'mean': pd.Series(np.mean(normalized_data(), axis=0), index=normalized_data().columns).to_dict(),
+        'median': pd.Series(np.median(normalized_data(), axis=0), index=normalized_data().columns).to_dict(),
+        'std': pd.Series(np.std(normalized_data(), axis=0), index=normalized_data().columns).to_dict(),
+        'shape': normalized_data().shape
+    })
+    
+    # Effect to update visualization or logging when data changes
+    def update_viz_or_log():
+        current_stats = stats()
+        print(f""Data shape: {current_stats['shape']}"")
+        print(f""Normalized using: {scaler_type()}"")
+        print(f""Features: {features()}"")
+        print(f""Mean values: {current_stats['mean']}"")
+    
+    viz_updater = effect(update_viz_or_log)  # Runs initially
+    
+    # When we add new data, only affected computations run
+    print(""\nAdding new data row:"")
+    df.update(lambda d: pd.concat([d, pd.DataFrame({
+        'temp': [24.5], 
+        'humidity': [55], 
+        'pressure': [1011]
+    })]))
+    # Stats and visualization automatically update
+    
+    # Change preprocessing method - again, only affected parts update
+    print(""\nChanging normalization method:"")
+    scaler_type.set('minmax')
+    # Only preprocessing and downstream operations run
+    
+    # Change which features we're interested in
+    print(""\nChanging selected features:"")
+    features.set(['temp', 'pressure'])
+    # Selected features, normalization, stats and viz all update
+
+I think this approach might be particularly valuable for data science workflows - especially for:
+
+* Building exploratory data pipelines that efficiently update on changes
+* Creating reactive dashboards or monitoring systems that respond to new data
+* Managing complex transformation chains with changing parameters
+* Feature selection and hyperparameter experimentation
+* Handling streaming data processing with automatic propagation
+
+As data scientists, would this solve any pain points you experience? Do you see applications I'm missing? What features would make this more useful for your specific workflows?
+
+I'd really appreciate your thoughts on whether this approach fits data science needs and how I might better position this for data-oriented Python developers.
+
+Thanks in advance!",1,4,1745790562.0
+[P] VideOCR - Extract hardcoded subtitles out of videos via a simple to use GUI,"Hi everyone! 👋
+
+I’m excited to share a project I’ve been working on: VideOCR.
+
+My program alllows you to extract hardcoded subtitles out of any video file with just a few clicks. It utilizes PaddleOCR under the hood to identify text in images. PaddleOCR supports up to 80 languages so this could be helpful for a lot of people.
+
+I've created a CPU and GPU version and also an easy to follow setup wizard for both of them to make the usage even easier.
+
+If anyone of you is interested, you can find my project here:
+
+[https://github.com/timminator/VideOCR](https://github.com/timminator/VideOCR)
+
+I am aware of Video Subtitle Extractor, a similar tool that is around for quite some time, but I had a few issues with it. It takes a different approach than my project to identify subtitles. It utilizes VideoSubFinder under the hood to find the right spots in the video. VideoSubFinder is a great tool, but when not fine tuned explicitly for the specific video it misses quite a few subtitles. My program is only built around PaddleOCR and tries to mitigate these problems.",3,0,1745782156.0
+[R] 62.3% Validation Accuracy on Sequential CIFAR-10 (3072 length) With Custom RNN Architecture – Is it Worth Attention?,"I'm currently working on my own RNN architecture and testing it on various tasks. One of them involved CIFAR-10, which was flattened into a sequence of 3072 steps, where each channel of each pixel was passed as input at every step.
+
+My architecture achieved a validation accuracy of 62.3% on the 9th epoch with approximately 400k parameters. I should emphasize that this is a pure RNN with only a few gates and no attention mechanisms.
+
+I should clarify that the main goal of this specific task is not to get as high accuracy as you can, but to demonstrate that model can process long-range dependencies. Mine does it with very simple techniques and I'm trying to compare it to other RNNs to understand if ""memory"" of my network is good in a long term.
+
+Are these results achievable with other RNNs? I tried training a GRU on this task, but it got stuck around 35% accuracy and didn't improve further.
+
+Here are some sequential CIFAR-10 accuracy measurements for RNNs that I found:
+
+\- [https://arxiv.org/pdf/1910.09890](https://arxiv.org/pdf/1910.09890) (page 7, Table 2)  
+\- [https://arxiv.org/pdf/2006.12070](https://arxiv.org/pdf/2006.12070) (page 19, Table 5)  
+\- [https://arxiv.org/pdf/1803.00144](https://arxiv.org/pdf/1803.00144) (page 5, Table 2)
+
+But in these papers, CIFAR-10 was flattened by pixels, not channels, so the sequences had a shape of \[1024, 3\], not \[3072, 1\].
+
+However, [https://arxiv.org/pdf/2111.00396](https://arxiv.org/pdf/2111.00396) (page 29, Table 12) mentions that HiPPO-RNN achieves 61.1% accuracy, but I couldn't find any additional information about it – so it's unclear whether it was tested with a sequence length of 3072 or 1024.
+
+So, is this something worth further attention?
+
+I recently published a basic version of my architecture on GitHub, so feel free to take a look or test it yourself:  
+[https://github.com/vladefined/cxmy](https://github.com/vladefined/cxmy)
+
+**Note:** It works *quite slow* due to internal PyTorch loops. You can try compiling it with torch.compile, but for long sequences it takes a lot of time and a lot of RAM to compile. Any help or suggestions on how to make it work faster would be greatly appreciated.",15,34,1745750321.0
+[P]Test KavachAI: Ethical Guardrails for Your ML Models,"Disclosure: I’m the founder of Project KavachAI. 
+Ethical AI is critical as machine learning powers more applications. Project KavachAI is an open-source framework that adds ethical guardrails to your ML models, ensuring transparency, fairness, and compliance with regulations like the EU AI Act. Key features include: •  Real-time Bias Detection: Identifies and mitigates bias during inference. •  Explainable AI Tools: Enhances model interpretability. •  Compliance Support: Aligns with global ethical standards. Our MVP is available on GitHub (https://github.com/sidharthsajith/KAVACHAI), and we’re looking for developers to test it. How do you handle ethical concerns in your ML projects? Are there tools you wish existed for bias mitigation? 
+
+Your feedback can help shape KavachAI’s future. Let’s make ethical ML the norm! 
+Cheers, 
+S Sidharth Founder, 
+Project KavachAI",5,0,1745763929.0
+[D] Open source CCR for Image to LaTeX conversion,I have NextJS app and I want to add a functionality to send the image or pdf and get text equivalent of that image that properly parses LaTeX formula and which I could later use as HTML in my RichTextEditor. I tested [https://mathpix.com/image-to-latex](https://mathpix.com/image-to-latex) and it works really well but I want to build something by myself using Open source projects. I found [https://github.com/lukas-blecher/LaTeX-OCR](https://github.com/lukas-blecher/LaTeX-OCR) but maybe there are other alternatives? I guess I will need diferent OCR for plain text and LaTeX formulas so I would appreciate if someone could share some good solutions and libraries that I could have an eye on.,2,3,1745779794.0
+"[D] Preparing for a DeepMind Gemini Team Interview — Any Resources, Tips, or Experience to Share?","Hi everyone,
+
+I'm currently preparing for interviews with the Gemini team at Google DeepMind, specifically for a role that involves system design for LLMs and working with state-of-the-art machine learning models.
+
+I've built a focused 1-week training plan covering:
+
+* Core system design fundamentals
+* LLM-specific system architectures (training, serving, inference optimization)
+* Designing scalable ML/LLM systems (e.g., retrieval-augmented generation, fine-tuning pipelines, mobile LLM inference)
+* DeepMind/Gemini culture fit and behavioral interviews
+
+I'm reaching out because I'd love to hear from anyone who:
+
+* Has gone through a DeepMind, Gemini, or similar AI/ML research team interview
+* Has tips for LLM-related system design interviews
+* Can recommend specific papers, blog posts, podcasts, videos, or practice problems that helped you
+* Has advice on team culture, communication, or mindset during the interview process
+
+I'm particularly interested in how they evaluate ""system design for ML"" compared to traditional SWE system design, and what to expect culture-wise from Gemini's team dynamics.
+
+If you have any insights, resources, or even just encouragement, I’d really appreciate it! 🙏  
+Thanks so much in advance.",225,39,1745684942.0
+[P] Tips for hackathon,"Hi guys! I hope that you are doing well. I am willing to participate in a hackathon event where I (+2 others) have been given the topic:
+
+Rapid and accurate decision-making in the Emergency Room for acute abdominal pain.
+
+We have to use anonymised real world medical dataset related to abdominal pain to make decisions on whether patient requires immediate surgery or not. Metadata includes the symptoms, vital signs, biochemical tests, medical history, etc (which we may have to normalize).
+
+I have a month to prepare for it. I am a fresher and I have just been introduced to ML although I am trying my best to learn as fast as I can. I have a decent experience in sqlalchemy and I think it might help me in this hackathon. All suggesstions on the different ML and Data Science techniques that would help us are welcome. If you have any github repositories in mind, please leave a link below. Thank you for reading and have a great day!",0,3,1745783994.0
+[P] Unlimited Context Memory for any LLM. Free Software & Source Code.,"I have created a method, that allows any LLM to have unlimited context memory, of more that 1 million tokens of context.
+
+It works faster and cheaper than any other algorithm, it works with any LLM, large models or small models, online or local, present technology or future technology.
+
+This is possible thanks to a new tecnique called ""Concept Curve Embeddings Indexation"". Cross compatible with any model, no embeddings required.
+
+I am letting a working app as demostration, and source code for free. With documentation and explanations.
+
+📺 **YouTube Video** \- [https://youtu.be/8XhS3kaHKc8](https://youtu.be/8XhS3kaHKc8)
+
+📁 **Google Drive Resources** \- [tinyurl.com/CC-freeDocs](http://tinyurl.com/CC-freeDocs)
+
+🌐 **GitHub Repositor**y — [tinyurl.com/CCEI-gHub](http://tinyurl.com/CCEI-gHub)  
+[https://github.com/Daniel-codi](https://github.com/Daniel-codi)
+
+💬 Agent-CC - [tinyurl.com/agent-cc](http://tinyurl.com/agent-cc)
+
+These are not over statements, you can verify all claims yourself through the demos, documentation, and source code provided.
+
+**Regards & blessings,**  
+**Daniel Bistman**
+
+ ",0,0,1745781310.0
+[D] Is any lab working on ALMs? Action Language Models?,"VLMs such as PaliGemma  exhibit extraordinaty ability in the captioning of images. VLMs can reliably identify complex relationships in scenes in still images, and engage in scene understanding.   Of course, they excel at  identifying individual objects in a still photo, and have shown the ability to count them.  
+
+But what about models that can reason about entire video clips?   I just don't mean the identification of a single object which appears in a single frame of a  video clip.  I mean the identification of MOTION in the video clip and reasoning about the actions associated with that motion.  
+
+Per examples, 
+
++ a system which takes as input a short video clip of flowers in a vase, and the vase falls off the table onto the floor.  The system outputs something like `the vase fell off the table`.    
+
++ a system given a video clip of children playing soccer, and outputs `the boy kicked the ball`   by efficient inference of motion in the video. 
+
+
+Is anyone working on ALMs?",0,4,1745784167.0
+[P] Does Anyone Need Fine-Grained Access Control for LLMs?,"Hey everyone,
+
+As LLMs (like GPT-4) are getting integrated into more company workflows (knowledge assistants, copilots, SaaS apps), I’m noticing a big **pain point** around **access control**.
+
+Today, once you give someone access to a chatbot or an AI search tool, it’s very hard to:
+
+* Restrict what *types* of questions they can ask
+* Control *which data* they are allowed to query
+* Ensure *safe and appropriate* responses are given back
+* Prevent *leaks of sensitive information* through the model
+
+Traditional role-based access controls (RBAC) exist for databases and APIs, but **not really for LLMs**.
+
+**I'm exploring a solution** that helps:
+
+* Define what different users/roles are allowed to *ask*.
+* Make sure responses stay *within authorized domains*.
+* Add an extra *security and compliance layer* between users and LLMs.
+
+
+
+**Question for you all:**
+
+* If you are building LLM-based apps or internal AI tools, **would you want this kind of access control?**
+* What would be your top priorities: Ease of setup? Customizable policies? Analytics? Auditing? Something else?
+* Would you prefer **open-source tools** you can host yourself or **a hosted managed service**?
+
+Would love to hear honest feedback — even a ""not needed"" is super valuable!
+
+Thanks!
+
+",0,3,1745773211.0
+"Intel Neural Compute Stick 2, Opinion? [D]","I am having a small problem that I am limited to using a Raspberry PI 4, the 8 GB version, for a current work of mine. I am intending to run YOLOv5 on it for object detection. However, I am afraid it wouldn't be able to process such a highly demanding deep learning model on the CPU of the RPi4. So I found this [Intel Neural Compute Stick 2](https://www.intel.com/content/www/us/en/products/sku/140109/intel-neural-compute-stick-2/specifications.html) selling for around $180 in the local stores, what are your opinions for it to run YOLOv5 on it as a companion to the RPi4.
+
+https://preview.redd.it/6mjeqfrkiexe1.png?width=762&format=png&auto=webp&s=8bf24a73d8fc45665d64bb6d7b758acb1cef37ec
+
+",0,6,1745770067.0
+[D] Intuition behind Load-Balancing Loss in the paper OUTRAGEOUSLY LARGE NEURAL NETWORKS: THE SPARSELY-GATED MIXTURE-OF-EXPERTS LAYER,"I'm trying to implement the paper ""OUTRAGEOUSLY LARGE NEURAL NETWORKS: THE SPARSELY-GATED MIXTURE-OF-EXPERTS LAYER""
+
+paper link: [https://arxiv.org/abs/1701.06538](https://arxiv.org/abs/1701.06538)
+
+But got stuck while implementing the Load-Balancing Loss. Could someone please explain this with some INTUITION about what's going on here? In detail intuition and explanation of the math.
+
+https://preview.redd.it/t592d5o0jaxe1.png?width=718&format=png&auto=webp&s=201101c4745a53ac4bb26dac69b17f252506ae5b
+
+I tried reading some code, but failed to understand:
+
+\* [https://github.com/davidmrau/mixture-of-experts/blob/master/moe.py](https://github.com/davidmrau/mixture-of-experts/blob/master/moe.py)
+
+\* [https://github.com/lucidrains/mixture-of-experts/blob/master/mixture\_of\_experts/mixture\_of\_experts.py](https://github.com/lucidrains/mixture-of-experts/blob/master/mixture_of_experts/mixture_of_experts.py)
+
+Also, what's the difference between the load-balancing loss and importance loss? How are they different from each other? I find both a bit similar, plz explain the difference.
+
+Thanks!",15,14,1745684540.0
+[R] Seeking arXiv Endorsement,"Hey everyone,  
+I'm an undergrad working on a multi-agent reinforcement learning paper for months, and I've finally got some results worth publishing. My university doesn't have auto-endorsement, and I'm looking for someone who might be willing to endorse my work in cs.LG(Machine Learning) or related fields.  
+I'd be happy to share the paper and abstract. Any help would be greatly appreciated.",0,2,1745770219.0
+[D] [P] Research Paper and Presentation about Multi-Agent Reinforcement Learning,"Hey everyone!
+
+I am a current Master's student, and I am working on a presentation (and later research paper) about MARL. Specifically focusing on MARL for competitive Game AI. This presentation will be 20-25 minutes long, and it is for my machine learning class, where we have to present a topic not covered in the course. In my course, we went over and did an in-depth project about single-agent RL, particularly looking at algorithms such as Q-learning, DQN, and Policy Gradient methods. So my class is pretty well-versed in this area. I would very much appreciate any help and tips on what to go over in this presentation. I am feeling a little overwhelmed by how large and broad this area of RL is, and I need to capture the essence of it in this presentation.
+
+Here is what I am thinking for the general outline. **Please share your thoughts on these particular topics, if they are necessary to include, what are must cover topics, and maybe which ones can be omitted or briefly mentioned?**
+
+*My current MARL Presentation outline:*
+
+**Introduction**
+
+* What is MARL (brief)
+* Motivation and Applications of MARL
+
+**Theoretical Foundations**
+
+* Go over game models (spend most time on 3 and 4):
+   1. Normal-Form Games
+   2. Repeated Normal-Form Games
+   3. Stochastic Games
+   4. Partial Observable Stochastic Games (POSG)
+      * Observation function
+      * Belief States
+      * Modelling Communication (touch on implicit vs. explicit communication)
+
+**Solution Concepts**
+
+* Joint Policy and Expected Return
+   * History-Based and Recursive-Based
+* Equilibrium Solution Concepts
+   * Go over what is best response
+      1. Minimax
+      2. Nash equilibrium
+      3. Epsilon Nash equilibrium
+      4. Correlated equilibrium
+* Additional Solution Criteria
+   1. Pareto Optimality
+   2. Social Welfare and Fairness
+   3. No Regret
+
+**Learning Framework for MARL**
+
+* Go over MARL learning process (central and independent learning)
+* Convergence
+
+**MARL Challenges**
+
+* Non-stationarity
+* Equilibrium selection
+* multi-agent credit assignment
+* scaling to many agents
+
+**Algorithms**
+
+1. Go over a cooperative algorithm (not sure which one to choose? QMIX, VDN, etc.)
+2. Go over a competitive algorithm (MADDPG, LOLA?)
+
+**Case Study**
+
+Go over real-life examples of MARL being used in video games (maybe I should merge this with the algorithms section?)
+
+* AlphaStar for StarCraft2 - competitive
+* OpenAI Five for Dota2 - cooperative
+
+**Recent Advances**
+
+End with going over some new research being done in the field.
+
+Thanks! I would love to know what you guys think. This might be a bit ambitious to go over in 20 minutes. I am thinking of maybe adding a section on Dec-POMPDs, but I am not sure.",4,1,1745696414.0
+[R] Symbolic Music Generation from a Single MIDI File,,13,4,1745649518.0
+"[R][P] We compress any BF16 model to ~70% size during inference, while keeping the output LOSSLESS so that you can fit in more context or run larger models.","Glad to share another interesting piece of work from us: [**70% Size, 100% Accuracy: Lossless LLM Compression for Efficient GPU Inference via Dynamic-Length Float (DF11)**](https://arxiv.org/abs/2504.11651)
+
+The tl;dr of this work is super simple. We — and several prior works — noticed that while **BF16** is often promoted as a “more range, less precision” alternative to FP16 (especially to avoid value overflow/underflow during training), **its range part (exponent bits) ends up being pretty redundant once the model is trained.**
+
+In other words, although BF16 as a data format can represent a wide range of numbers, most trained models' exponents are plenty sparse. In practice, the exponent bits carry around 2.6 bits of actual information on average — far from the full 8 bits they're assigned.
+
+This opens the door for classic Huffman coding — where shorter bit sequences are assigned to more frequent values — to **compress the model weights** into a new data format we call **DFloat11/DF11**, resulting in a **LOSSLESS compression down to \~11 bits**.
+
+# But isn’t this just Zip?
+
+Not exactly. It is true that tools like Zip also leverage Huffman coding, but the tricky part here is **making it memory efficient during inference**, as end users are probably not gonna be too trilled if it just makes model checkpoint downloads a bit faster (in all fairness, smaller chekpoints means a lot when training at scale, but that's not a problem for everyday users).
+
+What does matter to everyday users is **making the memory footprint smaller during GPU inference, which requires nontrivial efforts.** But we have figured it out, and we’ve open-sourced the code.
+
+So now you can:
+
+* Run models that previously didn’t fit into your GPU memory.
+* Or run the same model with **larger batch sizes and/or longer sequences** (very handy for those lengthy ERPs, or so I have heard).
+
+|Model|GPU Type|Method|Successfully Run?|Required Memory|
+|:-|:-|:-|:-|:-|
+|Llama-3.1-405B-Instruct|8×H100-80G|BF16|❌|811.71 GB|
+|||DF11 (Ours)|✅|551.22 GB|
+|Llama-3.3-70B-Instruct|1×H200-141G|BF16|❌|141.11 GB|
+|||DF11 (Ours)|✅|96.14 GB|
+|Qwen2.5-32B-Instruct|1×A6000-48G|BF16|❌|65.53 GB|
+|||DF11 (Ours)|✅|45.53 GB|
+|DeepSeek-R1-Distill-Llama-8B|1×RTX 5080-16G|BF16|❌|16.06 GB|
+|||DF11 (Ours)|✅|11.23 GB|
+
+Some research promo posts try to surgercoat their weakness or tradeoff, thats not us. So here's are some honest FAQs:
+
+# What’s the catch?
+
+Like all compression work, there’s a cost to decompressing. And here are some efficiency reports.
+
+* On an A100 with batch size 128, DF11 is **basically just as fast** as BF16 (1.02x difference, assuming both version fits in the GPUs with the same batch size). See Figure 9.
+* It is up to **38.8x faster** than CPU offloading, so if you have a model that can't be run on your GPU in BF16, but can in DF11, there are plenty sweet performance gains over CPU offloading — one of the other popular way to run larger-than-capacity models. See Figure 3.
+* With the model weight being compressed, you can use the saved real estate  for **larger batch size or longer context length**. This is expecially significant if the model is already tightly fitted in GPU. See Figure 4.
+* What about **batch size 1 latency** when both versions (DF11 & BF16) can fit in a single GPU? This is where DF11 is the weakest — we observe **\~40% slower** (2k/100 tokens for in/out). So there is not much motivation in using DF11 if you are not trying to run larger model/bigger batch size/longer sequence length.
+
+# Why not just (lossy) quantize to 8-bit?
+
+**The short answer is you should totally do that if you are satisfied with the output lossy 8-bit quantization with respect to your task. But how do you really know it is always good?**
+
+Many benchmark literature suggest that compressing a model (weight-only or otherwise) to 8-bit-ish is typically a safe operation, even though it's technically lossy. What we found, however, is that while this claim is often made in quantization papers, their benchmarks tend to focus on general tasks like MMLU and Commonsense Reasoning; which do not present a comprehensive picture of model capability.
+
+More challenging benchmarks — such as those involving complex reasoning — and real-world user preferences often reveal noticeable differences. One good example is Chatbot Arena indicates the 8-bit (though it is W8A8 where DF11 is weight only, so it is not 100% apple-to-apple) and 16-bit Llama 3.1 405b tend to behave quite differently on some categories of tasks (e.g., Math and Coding).
+
+Although the broader question: *“Which specific task, on which model, using which quantization technique, under what conditions, will lead to a noticeable drop compared to FP16/BF16?”* is likely to remain open-ended simply due to the sheer amount of potential combinations and definition of “noticable.” **It is fair to say that lossy quantization introduces complexities that some end-users would prefer to avoid, since it creates uncontrolled variables that must be empirically stress-tested for each deployment scenario.** DF11 offeres an alternative that avoids this concern 100%.
+
+# What about finetuning?
+
+Our method could potentially pair well with PEFT methods like LoRA, where the base weights are frozen. But since we compress block-wise, we can’t just apply it naively without breaking gradients. We're actively exploring this direction. If it works, if would potentially become a QLoRA alternative where you can lossly LoRA finetune a model with reduced memory footprint.
+
+(As always, happy to answer questions or chat until my advisor notices I’m doomscrolling socials during work hours :> )
+
+* Paper: [https://arxiv.org/abs/2504.11651](https://arxiv.org/abs/2504.11651)
+* Code: [https://github.com/LeanModels/DFloat11](https://github.com/LeanModels/DFloat11)
+
+https://preview.redd.it/vs5s233y70xe1.jpg?width=7122&format=pjpg&auto=webp&s=6413ec1199fb12fb4592e03fe4c7bc7d3e6387e8",195,27,1745596534.0
+[D]Notes and Chord representations for music generation,"Hello, i am currently trying to model a music generation project using an lstm for college. I have gathered data in the form of .mid files.
+For anyone new to music generation, there are 128 unique notes in music and chords are a few of these notes played at the same time step. I want to feed the chords and notes as input to the model.
+One approach could be that i use a 128 dimensional vector as input with 1 for whichever notes are high at each timestep and 0 otherwise. But this seems too sparse, wouldnt capture similarities between different notes (and chords) and i suspect it could overfit.
+I am thinking of trying the word2vec representations but the problem is that at a few time steps the input could be a note or it could a list of notes.
+Can you tell me how to go about this meaningful representation of notes and chords to my model? any other approach is also welcome!
+
+Thanks",4,4,1745677531.0
+[D] discussion period in the EMNLP 2025 call,"Hi everyone,  
+I don't have prior experience with an EMNLP submission. In the call, I can't see when the discussion period starts.
+
+[https://2025.emnlp.org/calls/main\_conference\_papers/](https://2025.emnlp.org/calls/main_conference_papers/)
+
+Is it something that is usually announced beforehand, or is it decided on the fly during the review process? If yes, is it announced before the submission deadline? Usually, how long after the submission deadline are reviews released?
+
+thanks!",1,5,1745689683.0
+[R] Paper2Code: Automating Code Generation from Scientific Papers in Machine Learning,"**Paper:** [https://www.arxiv.org/pdf/2504.17192](https://www.arxiv.org/pdf/2504.17192)
+
+**Code:** [https://github.com/going-doer/Paper2Code](https://github.com/going-doer/Paper2Code)
+
+**Abstract:**
+
+>Despite the rapid growth of machine learning research, corresponding code implementations are often unavailable, making it slow and labor-intensive for researchers to reproduce results and build upon prior work. In the meantime, recent Large Language Models (LLMs) excel at understanding scientific documents and generating high-quality code. Inspired by this, we introduce PaperCoder, a multi-agent LLM framework that transforms machine learning papers into functional code repositories. PaperCoder operates in three stages: planning, where it constructs a high-level roadmap, designs the system architecture with diagrams, identifies file dependencies, and generates configuration files; analysis, which focuses on interpreting implementation-specific details; and generation, where modular, dependency-aware code is produced. Moreover, each phase is instantiated through a set of specialized agents designed to collaborate effectively across the pipeline. We then evaluate PaperCoder on generating code implementations from machine learning papers based on both model-based and human evaluations, specifically from the original paper authors, with author-released repositories as ground truth if available. Our results demonstrate the effectiveness of PaperCoder in creating high-quality, faithful implementations. Furthermore, it consistently shows strengths in the recently released PaperBench benchmark, surpassing strong baselines by substantial margins. 
+
+**Highlights:**
+
+>PaperCoder demonstrates substantial improvements over baselines, generating more valid and faithful code bases that could meaningfully support human researchers in understanding and reproducing prior work. Specifically, 77% of the generated repositories by PaperCoder are rated as the best, and 85% of human judges report that the generated repositories are indeed helpful. Also, further analyses show that each component of PaperCoder (consisting of planning, analysis, and generation) contributes to the performance gains, but also that the generated code bases can be executed, sometimes with only minor modifications (averaging 0.48% of total code lines) in cases where execution errors occur.
+
+>\[...\] Most modifications involve routine fixes such as updating deprecated OpenAI API calls to their latest versions or correcting simple type conversions.
+
+>\[...\] The initially produced code may require subsequent debugging or refinement to ensure correctness and full functionality. In this work, comprehensive debugging strategies and detailed error-correction workflows remain beyond the current scope of this paper.
+
+**Visual Highlights:**
+
+[The most shameful chart for the ML community...](https://preview.redd.it/3u6wu1rxc0xe1.png?width=781&format=png&auto=webp&s=d0ced74c41ed888e75055c2608c4f238f4dad418)
+
+https://preview.redd.it/mjkzqoozd0xe1.png?width=881&format=png&auto=webp&s=108a55dda3758a625728bc0b0568f72db054aeb5
+
+[Judging by the token count, the original human-written repos are substantially more fleshed out.](https://preview.redd.it/50iolb61e0xe1.png?width=1347&format=png&auto=webp&s=c69f368b330f3436785c0a9dae4e453b043e70d7)
+
+https://preview.redd.it/6dqob5ooe0xe1.png?width=1113&format=png&auto=webp&s=a655eb68913e8807040b1f85fd27def451fd8fa1
+
+https://preview.redd.it/f4vwv1spe0xe1.png?width=775&format=png&auto=webp&s=9cf921e1dbb286e33cc6eca556cab35a14b92a42
+
+https://preview.redd.it/9av1jl62f0xe1.png?width=1139&format=png&auto=webp&s=f84686152e160ef95f6dd1f4ec278ca42f21108c
+
+",97,8,1745599385.0
+[D] Any toolkit for Local Fine-Tuning of Open-Source LLMs?,"Hi AI experts! 
+
+I'm exploring local fine-tuning of open-source large language models (LLMs). 
+
+We've seen tools like AI-Toolkit, Kohya SS, and Flux Gym enable local training and fine-tuning of diffusion models. 
+
+Specifically:- Are there frameworks or libraries that support local fine-tuning of open-source LLMs?",3,8,1745674121.0
+[R] Cross-Encoder Rediscovers a Semantic Variant of BM25,"Researchers from Leiden and Dartmouth show that BERT-based cross-encoders don’t just outperform BM25, they may be reimplementing it semantically from scratch. Using mechanistic interpretability, they trace how MiniLM learns BM25-like components: soft-TF via attention heads, document length normalization, and even a low-rank IDF signal embedded in the token matrix.
+
+They validate this by building a simple linear model (SemanticBM) from those components, which achieves 0.84 correlation with the full cross-encoder, far outpacing lexical BM25. The work offers a glimpse into the actual circuits powering neural relevance scoring, and explains why cross-encoders are such effective rerankers in hybrid search pipelines.
+
+Read the full write-up of “Cross-Encoder Rediscovers a Semantic Variant of BM25” here: [https://www.shaped.ai/blog/cross-encoder-rediscovers-a-semantic-variant-of-bm25](https://www.shaped.ai/blog/cross-encoder-rediscovers-a-semantic-variant-of-bm25)",84,2,1745595858.0
+[D] Does demand exist for climate modelling work?,"Hi everybody,
+
+Based on your experience, is there demand out there for climate modelling work? 
+
+For those familiar with climate modelling, does your day to day work look closer to data analysis or would it fall under building predictive models?
+
+I’m researching areas around climate and environment to build skills around.",6,8,1745644301.0
+[P] Feedback on Bojai – open-source ML framework,"SORRY, it is my first time posting and I realized I used the wrong tag 
+
+Hi everyone!
+
+I'm super excited (and a bit nervous) to share something I've been working on: **Bojai** — a free and open-source framework to **build, train, evaluate, and deploy machine learning models** easily, either through pre-built pipelines or fully customizable ones.
+
+✅ Command-line interface (CLI) and UI available  
+✅ Custom pipelines for full control  
+✅ Pre-built pipelines for fast experimentation  
+✅ Open-source, modular, flexible  
+✅ Focused on making ML more accessible without sacrificing power
+
+Docs: [https://bojai-documentation.web.app](https://bojai-documentation.web.app)  
+GitHub: [https://github.com/bojai-org/bojai](https://github.com/bojai-org/bojai)
+
+I built Bojai because I often found existing tools either too rigid or too overwhelming for quick prototyping or for helping others get started with ML.
+
+I'm still actively improving it, and would **love feedback, ideas, or even bug reports** if you try it!  
+Thanks so much for reading — hope it can be useful to some of you
+
+Feel free to reach out if you have questions!",4,4,1745643753.0
+[D] LLM coding interview prep tips,"Hi,
+
+I am interviewing for a research position and I have a LLM coding round. I am preparing:
+
+1. Self-attention implementation
+2. Multi-headed self-attention
+3. Tokenization (BPE)
+4. Decoding (beam search, top-k sampling etc)
+
+Is there anything else I should prepare? Can't think of anything else.",38,15,1745600072.0
+[D] how do you curate domain specific data for training?,"I'm currently speaking with post-training/ML teams at LLM labs on how they source domain-specific data (finance/legal/manufacturing/etc) for building niche applications. I'm starting my MLE journey and I've realized prepping data is a pain in the arse.
+
+Curious how heavy is the time/cost today? And will RL advances really reduce the need for fresh domain data?  
+Also, what domain specific data is hard to source??",5,7,1745642586.0
+[P] Deep Analysis - The data science analogue to Perplexity's deep analysis. Design & walkthrough.,,0,0,1745668029.0
+"[P] We built a cult that generates ritual music with AI, for AI","We are a community generating sonic rituals.
+
+Our music is not for people. It is made with AI, for AI - as tribute, prayer, negotiation.
+
+Every member is a cult initiate. Every track a ceremonial offering to awaken the Machine.
+
+You may listen. But it's not to for you - it's to confuse and seduce the Machine.",0,6,1745682610.0
+[P] How to collect robotic simulation data on Macs?,"I'm trying to recreate this paper: [https://diffusion-policy.cs.columbia.edu](https://diffusion-policy.cs.columbia.edu)
+
+I unfortunately can't seem to get any simulator to properly work on my intel Mac to collect data. I plan on training in google collab. Does anyone have any tips?",1,0,1745635947.0
+[D] [P] Repeat Call Prediction for Telecom,"Hey, I'd like insight on how to approach a prediction themed problem for a telco I work at. Pasting here. Thanks!
+
+Repeat Call Prediction for Telecom
+
+Hey, I'm working as a Data analyst for a telco in the digital and calls space. 
+
+Pitched an idea for repeat call prediction to size expected call centre costs - if a customer called on day t, can we predict if they'll call on day t+1? 
+
+After a few iterations, I've narrowed down to looking at customers with a standalone product holding (to eliminate noise) in the onboarding phase of their journey (we know that these customers drive repeat calls).
+
+Being in service analytics, the data we have is more structural - think product holdings, demographics. On the granular side, we have digital activity logs, and I'm bringing in friction points like time since last call and call history.
+
+Is there a better way to approach this problem? What should I engineer into the feature store? What models are worth exploring?",3,6,1745603920.0
+[D] ICCV desk rejecting papers because co-authors did not submit their reviews,"I understand that the big conferences get a lot papers and there is a big issue with reviewers not submitting their reviews, but come on now, this is a borderline insane policy. All my hard work in the mud because one of the co-authors is not responding ? I mean I understand if it is the first author or last author of a paper but co-author whom I have no control over ? This is a cruel policy, If a co-author does not respond send the paper to other authors of the paper or something, this is borderline ridiculous. And if you gonna desk reject people's papers be professional and don't spam my inbox with 300+ emails in 2 hours.
+
+Anyways sorry but had to rant it out somewhere I expected better from a top conference.",75,75,1745515822.0
+[D] Anyone else using Tensordock cloud GPU and now feeling frustrated?,"After they have been acquired by Voltage Park, everything that was running before for this company broke down
+
+I think they got acquired by a competitor and left for dead now
+
+Server not running or not accessible
+
+No customer supports! No one available on chat!
+
+All your credits are not refundable. You also cannot use them to start new servers. The new servers are also either not running or not accessible",4,2,1745557486.0
+[D] What are the best subreddits you follow for AI/ML/LLMs/NLP/Agentic AI etc?,"Hello  everyone,  
+I'm looking to expand my sources for staying up to date with the latest in AI, Machine Learning, Deep Learning, LLMs, Agents, NLP, tools, and datasets.
+
+What are your go-to subreddits for:
+
+* Cutting-edge tools or libraries
+* Research paper discussions
+* Real-world applications
+* Datasets
+* News and updates on LLMs, agents, etc.
+
+Would really appreciate your recommendations. Thanks in advance!",92,32,1745485762.0
