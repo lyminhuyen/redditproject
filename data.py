@@ -4,8 +4,8 @@ import pandas as pd
 
 def crawl_data(limits):
     reddit = praw.Reddit(
-        client_id="gK4gpkYtFvY1UMyGphPBzw",
-        client_secret="KyeJsjXJpyYQZpLgbAXMuWQ8Wlgr3w",
+        client_id="YOUR_REDDIT_CLIENT_ID",
+        client_secret="YOUR_REDDIT_CLIENT_SECRET",
         user_agent="reddit-stream"
     )
     subreddit = reddit.subreddit("MachineLearning")
