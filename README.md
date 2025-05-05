@@ -1,4 +1,19 @@
-In script to create new project
-- Comment Quality Prediction / Toxicity Detection
+*This project is my study processing*
 
 Pipeline: Crawl Reddit → Clean Text → Label Sentiment → Train Model → Build Web App → Deploy
+
+
+# Requirement
+Install streamlit
+
+```
+pip install streamlit
+```
+
+# Target
+- Comment Quality Prediction / Toxicity Detection
+- Classify Topic
+- Create Chatbot Asking Topic on Reddit
+- Using LLM
+
+# Reference
