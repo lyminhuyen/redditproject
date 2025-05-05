@@ -2,7 +2,7 @@ import praw
 import datetime
 import pandas as pd
 
-def get_latest_posts(limits):
+def crawl_data(limits):
     reddit = praw.Reddit(
         client_id="gK4gpkYtFvY1UMyGphPBzw",
         client_secret="KyeJsjXJpyYQZpLgbAXMuWQ8Wlgr3w",
