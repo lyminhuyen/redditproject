@@ -4,11 +4,12 @@ Pipeline: Crawl Reddit → Clean Text → Label Sentiment → Train Model → Bu
 
 
 # Requirement
-Install streamlit
+- Install streamlit
 
 ```
 pip install streamlit
 ```
+- Get you own API from [this](https://www.reddit.com/prefs/apps)
 
 # Target
 - Comment Quality Prediction / Toxicity Detection
