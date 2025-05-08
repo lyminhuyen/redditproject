@@ -9,12 +9,15 @@ Pipeline: Crawl Reddit → Clean Text → Label Sentiment → Train Model → Bu
 ```
 pip install streamlit
 ```
-- Get you own API from [this](https://www.reddit.com/prefs/apps)
+- Get you own key from [this](https://www.reddit.com/prefs/apps)
 
 # Target
-- Comment Quality Prediction / Toxicity Detection
+
 - Classify Topic
 - Create Chatbot Asking Topic on Reddit
-- Using LLM
 
+# How to run
+```
+streamlit run streamlit.py
+```
 # Reference
