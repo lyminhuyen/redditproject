@@ -9,6 +9,10 @@ Pipeline: Crawl Reddit → Clean Text → Label Sentiment → Train Model → Bu
 ```
 pip install streamlit
 ```
+- Intsall psaw lib
+```
+pip install psaw
+```
 - Get you own key from [this](https://www.reddit.com/prefs/apps)
 
 # Target
